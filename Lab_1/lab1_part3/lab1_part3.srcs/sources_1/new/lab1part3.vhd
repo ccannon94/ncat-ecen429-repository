@@ -31,6 +31,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+entity full_adder is port(a, b, cin: in STD_LOGIC; sum, cout :out STD_LOGIC);
+end entity full_adder;
+
+architecture adder_arch of full_adder is
+begin
+    process(a, b, cin);
+    begin
+    if (a = '0' and b = '0' and cin = '0') then (cout <= '0' & sum <= '0');
+		elsif (a = '0' and b = '0' and cin = '1') then (cout <= '0' & sum <= '1');
+		elsif (a = '0' and b = '1' and cin = '0') then (cout <= '0' & sum <= '1');
+		elsif (a = '0' and b = '1' and cin = '1') then (cout <= '1' & sum <= '0');
+		elsif (a = '1' and b = '0' and cin = '0') then (cout <= '0' & sum <= '1');
+		elsif (a = '1' and b = '0' and cin = '1') then (cout <= '1' & sum <= '1');
+		elsif (a = '1' and b = '1' and cin = '0') then (cout <= '1' & sum <= '0');
+		elsif (a = '1' and b = '1' and cin = '1') then (cout <= '1' & sum <= '1');
+	end if;
+	end process;
+end architecture adder_arch;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
 entity lab1part3 is
     Port ( x1 : in STD_LOGIC;
            x0 : in STD_LOGIC;
@@ -42,11 +64,13 @@ entity lab1part3 is
 end lab1part3;
 
 architecture adder of lab1part3 is
+signal tmpcarry:STD_LOGIC;
+
+component full_adder port(a,b,cin : in STD_LOGIC; sum, cout : out STD_LOGIC);
+end component full_adder;
 
 begin
-
-z1 <= (x1 and not y1 and not y0) or (x1 and not x0 and not y1) or (not x1 and not x0 and y1) or (not x1 and y1 and not y0) or (not x1 and x0 and not y1 and y0) or (x1 and x0 and y1 and y0);
-z0 <= (x1 and x0 and y0) or (not x1 and x0 and not y0) or (x0 and y1 and not y0) or (x1 and not x0 and y1);
-cout <= (x0 and y1 and y0) or (x1 and x0 and y0);
+    component_0 : full_adder port map (x0, y0, '0', z0, tmpcarry);
+    component_2 : full_adder port map (x1, y1, tmpcarry, z1, cout);
 
 end adder;
