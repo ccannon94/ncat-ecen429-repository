@@ -22,15 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- This entity will perform 2 operations with 3 inputs. The result of each operation
+-- will be output to a bit.
 entity lab1part1 is
     Port ( a : in STD_LOGIC;
            b : in STD_LOGIC;
@@ -42,8 +35,9 @@ end lab1part1;
 architecture Behavioral of lab1part1 is
 
 begin
-
-d <= a and b;
-e <= b or c;
+    -- Output 'D' will be the result of 'A' AND 'B'
+    d <= a and b;
+    -- Output 'E' will be the result of 'B' OR 'C'
+    e <= b or c;
 
 end Behavioral;
