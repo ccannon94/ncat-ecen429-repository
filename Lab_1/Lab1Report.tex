@@ -138,13 +138,62 @@ For our own circuit design, we implemented a simple adder for two 2-bit numbers.
 	\caption{\label{fig:figure-name}Circuit diagram for the 2-bit adder implemented for this assignment}
 \end{figure}
 
+When completing the pin-mapping for this problem, we prioritize ease-of-use and readability for the user. All bits are entered and displayed with the most significant bit on the right, and each 2-bit number is in a distinct location on the Basys3 board. These assignments are summarized in Table 5. The truth table for the addition of two 2-bit numbers is outlined in Table 6.
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Bit & Label & Address \\ \hline
+		X0 & Switch 0 & V17 \\ \hline
+		X1 & Switch 1 & V16 \\ \hline
+		Y0 & Switch 14 & T1 \\ \hline
+		Y1 & Switch 15 & R2 \\ \hline
+		Z0 & LED 0 & U16 \\ \hline
+		Z1 & LED 1 & E19 \\ \hline
+		Cout & LED 15 & L1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:table-name}Input and output bit specification for adding two 2-bit numbers.}
+\end{center}	
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l | l | l | l | l |}
+		\hline
+		X1 & X0 & Y1 & Y0 & Cout & Z1 & Z0 \\ \hline
+		0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 1 & 0 & 0 & 1 \\ \hline
+		0 & 0 & 1 & 0 & 0 & 1 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 0 & 1 & 1 \\ \hline
+		0 & 1 & 0 & 0 & 0 & 0 & 1 \\ \hline
+		0 & 1 & 0 & 1 & 0 & 1 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 0 & 1 & 1 \\ \hline
+		0 & 1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		1 & 0 & 0 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 0 & 1 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 1 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		1 & 1 & 1 & 0 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 1 & 1 & 1 & 0 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:table-name}Truth table for adding two 2-bit numbers}
+\end{center}	
+\end{table}
+
+
+
 \subsubsection{Results}
 
-While this circuit did require our own design, we were able to successfully implement the full adder component in VHDL. This can be viewed in Appendix APPPEND. Once again, we were able to view the combination of inputs and resulting output. By comparing these to our truth table, we verified that our design worked properly. These trials are documented in Figure PICS.
+While this circuit did require our own design, we were able to successfully implement the full adder component in VHDL. This can be viewed in Appendix E. Once again, we were able to view the combination of inputs and resulting output. By comparing these to our truth table, we verified that our design worked properly. These trials are documented in Figure PICS.
 
 \section{Conclusion}
 
 In conclusion, all three design challenges were successfully implemented on the Basys3 board. Moreover, by successfully implementing these designs we have been able to accomplish the primary goal of the lab, which was gaining proficiency with both the Vivado Design Suite and the Digilent Basys3 Development board. The most challenging part of this lab was continuing to fine-tune designs after lab hours. Technically, configuring Vivado to run on a personal computer was quite challenging, but it offered a deeper insight to the overall operations of the design suite, which aided the lab in accomplishing it's mission. Implementing a full program including a component in VHDL also offered a challenge as there are several additional lines of code, such as a USE statement, that needed to be repeated for different entities. At first, this caused a code compilation error, but was corrected. Overall, the results of this lab are as expected, we were able to complete all three tasks, and have gained confidence in using the Vivado Design Suite with the Digilent Basys3.
+
+\pagebreak
 
 \begin{appendices}
 
@@ -177,6 +226,10 @@ end Behavioral;
 
 \section{Part 1 Constraints File}
 
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{report_images/img5}
+\end{figure}
+
 \section{Part 2 VHDL Code}
 
 \begin{lstlisting}[language=VHDL]
@@ -208,7 +261,13 @@ begin
 end Behavioral;
 \end{lstlisting}
 
+\pagebreak
+
 \section{Part 2 Constraints File}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{report_images/img6}
+\end{figure}
 
 \section{Part 3 VHDL Code}
 
@@ -283,6 +342,10 @@ end adder;
 \end{lstlisting}
 
 \section{Part 3 Constraints File}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{report_images/img7}
+\end{figure}
 
 \end{appendices}
 
