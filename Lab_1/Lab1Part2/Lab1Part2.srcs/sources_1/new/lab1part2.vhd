@@ -22,15 +22,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- This entity has 3 inputs, the master switch, vibration sensor, and door sensor
+-- described in the car alarm problem. The siren is the only output.
 entity lab1part2 is
     Port ( m : in STD_LOGIC;
            v : in STD_LOGIC;
@@ -40,11 +33,15 @@ end lab1part2;
 
 architecture Behavioral of lab1part2 is
 
+-- tmp1 is required to carry the sensor state from the sensor OR gate to the master
+-- switch AND gate
 signal tmp1 : STD_LOGIC;
 
 begin
 
-tmp1 <= v or d;
-s <= m and tmp1;
+    --tmp1 tells whether or not a sensor is active
+    tmp1 <= v or d;
+    --'S' will be set to high when both the master switch AND a sensor are active
+    s <= m and tmp1;
 
 end Behavioral;
