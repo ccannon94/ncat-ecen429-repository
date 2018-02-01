@@ -27,30 +27,16 @@ For this first lab our task was to familiarize ourselves with Xilinx Vivado Desi
 
 \section{Background, Design Solution, and Results}
 \subsection{Problem 1: 2-bit AND Gate}
-The objective of this problem is to implement a single 2-bit AND gate in VHDL using the Basys3. The circuit diagram for this problem is in Figure 1 below.
+The objective of this problem is to implement a single 2-bit AND gate in VHDL using the Basys3. The circuit diagram for this problem is in Figure 1.
+
+\subsubsection{Background and Design Solution}
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{report_images/img2}
 	\caption{\label{fig:figure-name}Circuit diagram for AND gate.}
 \end{figure}
 
-The inputs for this problem are named 'A' and 'B' and the output is named 'C'.
-
-
-\begin{table}[h]
-\begin{center}
-	\begin{tabular}{| l | l | l |}
-		\hline
-		Bit & Label & Address\\ \hline
-		A & Switch 1 & V16\\ \hline
-		B & Switch 7 & W13\\ \hline
-		C & LED 3 & V19\\ \hline
-	\end{tabular}
-	\caption{\label{tab:table-name}Input and output bit specifications for problem 1.}
-\end{center}
-\end{table}
-
-These inputs and outputs will interact according to the properties of an AND gate, shown in the truth table below.
+The inputs for this problem are named 'A' and 'B' and the output is named 'C'. When BOTH 'A' and 'B' are '1', 'C' will also be 'C'. In all other cases, 'C' will be 0. This is demonstrated by the truth table shown in Table 1. The assignments for these pins were given by the instructions, and are shown in Table 2.
 
 \begin{table}[h]
 \begin{center}
@@ -66,17 +52,35 @@ These inputs and outputs will interact according to the properties of an AND gat
 \end{center}	
 \end{table}
 
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Bit & Label & Address\\ \hline
+		A & Switch 1 & V16\\ \hline
+		B & Switch 7 & W13\\ \hline
+		C & LED 3 & V19\\ \hline
+	\end{tabular}
+	\caption{\label{tab:table-name}Input and output bit specifications for problem 1.}
+\end{center}
+\end{table}
 
+\subsubsection{Results}
+
+This design functioned very easily, and we were able to observe each output 'C' for every combination of 'A' and 'B'. They are shown in Figure PICS. 
 
 \subsection{Problem 2: Car Alarm}
 
-Problem 2 referenced a car alarm system designed in class. The car alarm is made up of two sensors, a vibration sensor ('V') and a door sensor ('D'). The system is considered "active" when the master switch ('M') is activated. The car alarm has one output, an alarm siren ('S'). The logical circuit diagram for this is noted below.
+Problem 2 referenced a car alarm system designed in class. The car alarm is made up of two sensors, a vibration sensor ('V') and a door sensor ('D'). The system is considered "active" when the master switch ('M') is activated. The car alarm has one output, an alarm siren ('S'). The logical circuit diagram for this is Figure 2.
+
+\subsubsection{Background and Design Solution}
+
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{report_images/img1}
 	\caption{\label{fig:figure-name}Circuit diagram for car alarm.}
 \end{figure}
 
-The circuit of Figure 2 above translates to the following truth table:
+As shown in Figure 2, the inputs 'V' and 'D' are tied to the same OR gate, because either the vibration sensor or the door sensor can trigger an alarm if and only if the master switch is activated. Input 'M' is tied to an AND gate to show that the sensors can only trigger an alarm when this input is active. 'S' is the only output and we assume, based on the instructions of this exercise, that this output would be tied to some siren device such as the vehicle's horn or another audio device. The pin assignments for each input and output was given as part of the assignment and is summarized in Table 4.
 
 \begin{table}[h]
 \begin{center}
@@ -90,10 +94,6 @@ The circuit of Figure 2 above translates to the following truth table:
 	\caption{\label{tab:table-name}Truth table for the car alarm.}
 \end{center}
 \end{table}
-
-\newpage
-
-The given map for the input and output bits told us where we should assign each bit from our system.
 
 \begin{table}[h]
 \begin{center}
@@ -110,8 +110,32 @@ The given map for the input and output bits told us where we should assign each 
 \end{center}	
 \end{table}
 
-\subsection{Problem 3: Design Our Own Circuit}
-For our own circuit design, we implemented a simple adder for two 2-bit numbers. Our circuit consists of two full adders with ripple carry. There is assumed to be no carry-in for this system so the carry-in for our least significant bit adder is tied to 0. This design utilizes a component that reuses VHDL code for each full bit adder. This improved our practical understanding of components and streamlined the code process. The two bit numbers x and y are denoted as 'X1', 'X0', 'Y1', and 'Y0' where 1 is the most significant bit and 0 is the least significant bit of the respective number. The output, z, is represented as the bits 'Z1' and 'Z0', where 1 is the most significant bit and 0 is the least significant bit. The carry-out bit is represented by 'cout'
+\subsubsection{Results}
 
+The design created in class functioned well and we were able to test each possible combination of inputs and observe their output. We compared these results to our truth table to find that this design worked properly. The results of these trials can be viewed in Figure PICS.
+
+\subsection{Problem 3: Design Our Own Circuit}
+
+\subsubsection{Background and Design Solution}
+
+For our own circuit design, we implemented a simple adder for two 2-bit numbers. Our circuit consists of two full adders with ripple carry. There is assumed to be no carry-in for this system so the carry-in for our least significant bit adder is tied to 0. This design utilizes a component that reuses VHDL code for each full bit adder. This improved our practical understanding of components and streamlined the code process. The two bit numbers x and y are denoted as 'X1', 'X0', 'Y1', and 'Y0' where 1 is the most significant bit and 0 is the least significant bit of the respective number. The output, z, is represented as the bits 'Z1' and 'Z0', where 1 is the most significant bit and 0 is the least significant bit. The carry-out bit is represented by 'cout'. The full adder circuit is displayed in Figure 3 and the 2-bit adder is shown in Figure 4.
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{report_images/img3}
+	\caption{\label{fig:figure-name}Circuit diagram for a full adder}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\textwidth]{report_images/img4}
+	\caption{\label{fig:figure-name}Circuit diagram for the 2-bit adder implemented for this assignment}
+\end{figure}
+
+\subsubsection{Results}
+
+While this circuit did require our own design, we were able to successfully implement the full adder component in VHDL. This can be viewed in Appendix APPPEND. Once again, we were able to view the combination of inputs and resulting output. By comparing these to our truth table, we verified that our design worked properly. These trials are documented in Figure PICS.
+
+\section{Conclusion}
+
+In conclusion, all three design challenges were successfully implemented on the Basys3 board. Moreover, by successfully implementing these designs we have been able to accomplish the primary goal of the lab, which was gaining proficiency with both the Vivado Design Suite and the Digilent Basys3 Development board. The most challenging part of this lab was continuing to fine-tune designs after lab hours. Technically, configuring Vivado to run on a personal computer was quite challenging, but it offered a deeper insight to the overall operations of the design suite, which aided the lab in accomplishing it's mission. Implementing a full program including a component in VHDL also offered a challenge as there are several additional lines of code, such as a USE statement, that needed to be repeated for different entities. At first, this caused a code compilation error, but was corrected. Overall, the results of this lab are as expected, we were able to complete all three tasks, and have gained confidence in using the Vivado Design Suite with the Digilent Basys3.
 
 \end{document}
