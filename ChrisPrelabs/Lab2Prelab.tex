@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{listings}
+
+% DOCUMENT INFORMATION =================================================
+\title {ECEN 429: Introduction to Digital Systems Design Laboratory \\ North Carolina Agricultural and Technical State University \\ Department of Electrical and Computer Engineering} % Declare Title
+\author{Chris Cannon} % Declare authors
+\date{February 1, 2018}
+% ======================================================================
+
+\begin{document}
+	
+\maketitle
+
+\begin{center}
+	Lab 2 Prelab
+\end{center}
+
+\pagebreak
+
+\section{Introduction}
+
+The objective of this lab is to further master the use of the Vivado Design Suite in conjunction with the Basys3 Development Board. We will also practice implementing circuits of a given design on the Basys3 board. This lab consists of three parts, utilizing the seven segment displays for the first time. I anticipate that the seven segment display will offer a new technical challenge to complete.
+
+\section{Background, Design Solution, and Results}
+
+\subsection{Problem 1 Seven Segment Display}
+
+Using out1-out7 as the outputs from my VHDL program, I can map these to pins a-g on a seven segment display. See Table 1.
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline	
+		Output & Segment & Pin \\ \hline
+		out1 & a & W7 \\ \hline
+		out2 & b & W6 \\ \hline
+		out3 & c & U8 \\ \hline
+		out4 & d & V8 \\ \hline
+		out5 & e & U5 \\ \hline
+		out6 & f & V5 \\ \hline
+		out7 & g & U7 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:table-name}FPGA pin assignments for seven segment display.}
+\end{center}	
+\end{table}
+
+\subsection{Problem 2 1:2 Decoder}
+
+This decoder will convert a single bit into a 2-bit one hot format. The truth table for this simple circuit is Table 2. In order to perform this in VHDL, I would use the following simple program:
+
+\begin{lstlisting}[language=VHDL]
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- This declares an entity that will have the 2 needed inputs and 2 outputs	
+entity decoder is port (a, sel : in bit; out1, out2 : out bit);
+end entity decoder;
+
+architecture decoder_arch of decoder is
+begin
+	-- out1 is the result of 'A' AND the opposite of 'SEL'
+	out1 <= a and (not sel);
+	-- out2 is the result of 'A' AND 'SEL'
+	out2 <= a and sel;
+end architecture decoder_arch;	
+\end{lstlisting}
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l | l |}
+		\hline
+		a & sel & out1 & out2 \\ \hline
+		0 & 0 & 0 & 0 \\ \hline 
+		0 & 1 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 0 & 1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:table-name}Truth table for 1:2 decoder.}
+\end{center}	
+\end{table}
+
+\subsection{Problem 3 SUM of a Full Adder}
+
+I will derive the expression for SUM by first reference the truth table of the full-adder in Table 3. From table 3 I can derive that SUM will be equal to:
+
+\begin{lstlisting}[language=VHDL]
+((not a) and b and ci) or (a and (not b) and ci) or 
+(a and b and (not ci)) or (a and b and ci)
+\end{lstlisting}
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l | l | l |}
+		\hline
+		A & B & CI & SUM & CO \\ \hline
+		0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 1 \\ \hline
+		1 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 1 & 1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:table-name}Truth table for full adder.}
+\end{center}	
+\end{table}
+
+
+\section{Conclusion}
+
+After completion of the exercises, I feel well prepared for the lab. While the seven-segment display mapping was new, it was an easy challenge to overcome by simply employing the documentation. I think writing the truth table for the full adder when it wasn't strictly required will give me an additional resource that will be useful as I work through the lab.
+
+\end{document}
