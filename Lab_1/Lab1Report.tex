@@ -7,6 +7,7 @@
 \graphicspath{report_images/}
 \usepackage{appendix}
 \usepackage{listings}
+\usepackage{float}
 
 % DOCUMENT INFORMATION =================================================
 \title {ECEN 429: Introduction to Digital Systems Design Laboratory \\ North Carolina Agricultural and Technical State University \\ Department of Electrical and Computer Engineering} % Declare Title
@@ -34,8 +35,8 @@ The objective of this problem is to implement a single 2-bit AND gate and a sing
 \subsubsection{Background and Design Solution}
 
 \begin{figure}[h]
-	\includegraphics[width=\textwidth]{report_images/img2}
-	\caption{\label{fig:figure-name}Circuit diagram for AND gate.}
+	\includegraphics[width=\textwidth]{report_images/img1}
+	\caption{\label{fig:figure-name}Circuit diagram for AND gate and OR gate.}
 \end{figure}
 
 The inputs for this problem are labeled as 'A', 'B', and 'C'. The outputs are labeled 'D' and 'E'. The outputs are the product of an AND gate and an OR gate, respectively. This is demonstrated by the truth table shown in Table 1. The assignments for these pins were given by the instructions, and are shown in Table 2.
@@ -75,20 +76,60 @@ The inputs for this problem are labeled as 'A', 'B', and 'C'. The outputs are la
 
 \subsubsection{Results}
 
-This design functioned very easily, and we were able to observe each output 'C' for every combination of 'A' and 'B'. They are shown in Figure PICS. 
+This design functioned very easily, and we were able to observe each output 'D' and 'E' for every combination of 'A', 'B', and 'C'. They are shown in Figures 2-9. 
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0403.jpg}
+	\caption{\label{fig:figure-name}All switches (Switch 0, Switch 1, and Switch 2) are off, therefore all outputs are off (LED 6 and LED 7)}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0404.jpg}
+	\caption{\label{fig:figure-name}Only input 'A' is on, shown at Switch 0, therefore both outputs are off (LED 6 and LED 7)}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0405.jpg}
+	\caption{\label{fig:figure-name}Only input 'B' is on, shown at Switch 1, therefore Output 'D' is on (LED 6) and 'E' is off (LED 7).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0406.jpg}
+	\caption{\label{fig:figure-name}Inputs 'A' and 'B' are on, shown at Switch 0 and Switch 1 respectively, therefore both outputs are on (LED 6 and LED 7).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0407.jpg}
+	\caption{\label{fig:figure-name}Only input 'C' is on, shown at Switch 2, therefore Output 'D' is on (LED 6) and 'E' is off (LED 7).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0408.jpg}
+	\caption{\label{fig:figure-name}Inputs 'A' and 'C' are on, shown at Switch 0 and Switch 2 respectively., therefore only Output 'D' is on (LED 6) and 'E' is off (LED 7).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0409.jpg}
+	\caption{\label{fig:figure-name}Both inputs 'B' and 'C' are on, shown at Switch 1 and Swtich 2 respectively, therefore Output 'D' is on (LED 6) and 'E' is off (LED 7).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part1/IMG_0410.jpg}
+	\caption{\label{fig:figure-name}All inputs are on (Switch 1, Switch 2, Switch 3), therefore both outputs are on (LED 6 and LED 7).}
+\end{figure}
 
 \subsection{Problem 2: Car Alarm}
 
-Problem 2 referenced a car alarm system designed in class. The car alarm is made up of two sensors, a vibration sensor ('V') and a door sensor ('D'). The system is considered "active" when the master switch ('M') is activated. The car alarm has one output, an alarm siren ('S'). The logical circuit diagram for this is Figure 2.
+Problem 2 referenced a car alarm system designed in class. The car alarm is made up of two sensors, a vibration sensor ('V') and a door sensor ('D'). The system is considered "active" when the master switch ('M') is activated. The car alarm has one output, an alarm siren ('S'). The logical circuit diagram for this is Figure 10.
 
 \subsubsection{Background and Design Solution}
 
 \begin{figure}[h]
-	\includegraphics[width=\textwidth]{report_images/img1}
+	\includegraphics[width=\textwidth]{report_images/img2}
 	\caption{\label{fig:figure-name}Circuit diagram for car alarm.}
 \end{figure}
 
-As shown in Figure 2, the inputs 'V' and 'D' are tied to the same OR gate, because either the vibration sensor or the door sensor can trigger an alarm if and only if the master switch is activated. Input 'M' is tied to an AND gate to show that the sensors can only trigger an alarm when this input is active. 'S' is the only output and we assume, based on the instructions of this exercise, that this output would be tied to some siren device such as the vehicle's horn or another audio device. The pin assignments for each input and output was given as part of the assignment and is summarized in Table 4.
+As shown in Figure 10, the inputs 'V' and 'D' are tied to the same OR gate, because either the vibration sensor or the door sensor can trigger an alarm if and only if the master switch is activated. Input 'M' is tied to an AND gate to show that the sensors can only trigger an alarm when this input is active. 'S' is the only output and we assume, based on the instructions of this exercise, that this output would be tied to some siren device such as the vehicle's horn or another audio device. The pin assignments for each input and output was given as part of the assignment and is summarized in Table 4.
 
 \begin{table}[h]
 \begin{center}
@@ -111,8 +152,7 @@ As shown in Figure 2, the inputs 'V' and 'D' are tied to the same OR gate, becau
 		D & Button L & W19 \\ \hline
 		V & Switch 15 & R2 \\ \hline
 		M & Button R & T17 \\ \hline
-		D & LED 7 & V19 \\ \hline
-		E & LED 6 & U14 \\ \hline
+		S & LED 0 & U16 \\ \hline
 	\end{tabular}
 	\caption{\label{tab:table-name}Input and output bit specification for car alarm.}
 \end{center}	
@@ -120,13 +160,48 @@ As shown in Figure 2, the inputs 'V' and 'D' are tied to the same OR gate, becau
 
 \subsubsection{Results}
 
-The design created in class functioned well and we were able to test each possible combination of inputs and observe their output. We compared these results to our truth table to find that this design worked properly. The results of these trials can be viewed in Figure PICS.
+The design created in class functioned well and we were able to test each possible combination of inputs and observe their output. We compared these results to our truth table to find that this design worked properly. The results of these trials can be viewed in Figures 11-17.
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0411.jpg}
+	\caption{\label{fig:figure-name}With no inputs active, the output (LED 0) is off. }
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0412.jpg}
+	\caption{\label{fig:figure-name}With the vibration sensor (Switch 15) active, output (LED 0) is still off because the master switch (Button R) is not active.}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0413.jpg}
+	\caption{\label{fig:figure-name}With the vibration sensor active (Switch 15) and the master switch (Button R) active, output (LED 0) is active.}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0414.jpg}
+	\caption{\label{fig:figure-name}With the door switch active (Button L) and the master switch inactive (Button R) the output is not active (LED 0).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0415.jpg}
+	\caption{\label{fig:figure-name}With both the master switch (Button R) and the door switch (Button L) active, the output is active (LED 0).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0416.jpg}
+	\caption{\label{fig:figure-name}With all inputs (Switch 15, Button R, Button L active, the output is active (LED 0).}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{report_images/Lab1BoardPictures/Lab1Part2/IMG_0417.jpg}
+	\caption{\label{fig:figure-name}With only the master switch active (Button R), the output is not active (LED 0). }
+\end{figure}
 
 \subsection{Problem 3: Design Our Own Circuit}
 
 \subsubsection{Background and Design Solution}
 
-For our own circuit design, we implemented a simple adder for two 2-bit numbers. Our circuit consists of two full adders with ripple carry. There is assumed to be no carry-in for this system so the carry-in for our least significant bit adder is tied to 0. This design utilizes a component that reuses VHDL code for each full bit adder. This improved our practical understanding of components and streamlined the code process. The two bit numbers x and y are denoted as 'X1', 'X0', 'Y1', and 'Y0' where 1 is the most significant bit and 0 is the least significant bit of the respective number. The output, z, is represented as the bits 'Z1' and 'Z0', where 1 is the most significant bit and 0 is the least significant bit. The carry-out bit is represented by 'cout'. The full adder circuit is displayed in Figure 3 and the 2-bit adder is shown in Figure 4.
+For our own circuit design, we implemented a simple adder for two 2-bit numbers. Our circuit consists of two full adders with ripple carry. There is assumed to be no carry-in for this system so the carry-in for our least significant bit adder is tied to 0. This design utilizes a component that reuses VHDL code for each full bit adder. This improved our practical understanding of components and streamlined the code process. The two bit numbers x and y are denoted as 'X1', 'X0', 'Y1', and 'Y0' where 1 is the most significant bit and 0 is the least significant bit of the respective number. The output, z, is represented as the bits 'Z1' and 'Z0', where 1 is the most significant bit and 0 is the least significant bit. The carry-out bit is represented by 'cout'. The full adder circuit is displayed in Figure 3 and the 2-bit adder is shown in Figure 18.
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{report_images/img3}
