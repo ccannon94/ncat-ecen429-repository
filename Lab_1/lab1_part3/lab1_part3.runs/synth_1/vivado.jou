@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Jan 31 23:13:54 2018
-# Process ID: 2394
+# Start of session at: Thu Feb  1 01:24:00 2018
+# Process ID: 5566
 # Current directory: /home/chris/Documents/development/ncat-ecen429-repository/Lab_1/lab1_part3/lab1_part3.runs/synth_1
 # Command line: vivado -log lab1part3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab1part3.tcl
 # Log file: /home/chris/Documents/development/ncat-ecen429-repository/Lab_1/lab1_part3/lab1_part3.runs/synth_1/lab1part3.vds
