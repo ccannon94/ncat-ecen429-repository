@@ -8,6 +8,7 @@
 \usepackage{appendix}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{amsthm}
 
 % DOCUMENT INFORMATION =================================================
 \title {ECEN 429: Introduction to Digital Systems Design Laboratory \\ North Carolina Agricultural and Technical State University \\ Department of Electrical and Computer Engineering} % Declare Title
@@ -198,7 +199,9 @@ The resulting circuit successfully displayed the digit corresponding to each 4-b
 \subsection{Problem 2 1:2 Decoder}
 
 \subsubsection{Background}
+The task posed for this problem was to develop a 1:2 decoder and implement it on the Basys3. The design will include 2 inputs, a 1-bit number and an enable bit.
 
+\subsubsection{Design Solution}
 The 1:2 decoder will accept a 1-bit input 'a', and is controlled by the bit 'sel'. The output is made up of bits 'out1' and 'out2'. The ports are described in Table ~\ref{tab:decoderPort}.
 
 \begin{table}[h]
@@ -216,13 +219,40 @@ The 1:2 decoder will accept a 1-bit input 'a', and is controlled by the bit 'sel
 \end{center}
 \end{table}
 
-\subsubsection{Design Solution}
+The decoder will only produce input when 'sel', the enable bit, is HIGH. When 'sel' is HIGH, the decoder will activate the 'out1' bit, representing the decimal value "0". When 'a' is HIGH when 'sel' is HIGH, the decoder will activate the 'out2' bit, representing the decimal value "1". This is summarized in Table ~\ref{tab:decoderTruthTable}.
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l | l |}
+		\hline
+		a & sel & out1 & out2 \\ \hline
+		0 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 0 \\ \hline
+		1 & 0 & 0 & 0 \\ \hline
+		1 & 1 & 0 & 1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:decoderTruthTable} Truth table for 1:2 decoder.}
+	\label{tab:decoderTruthTable}
+\end{center}
+\end{table}
 
 \subsubsection{Results}
 
 \subsection{Problem 3 SUM of a Full Adder}
 
 \subsubsection{Background}
+
+A full adder is designed to incorporate both a carry-in and carry-out bit, which makes it more modular and allows us to build multi-bit adders. For this problem, we are to design a full adder that will accept a carry-in, a carry-out, and perform addition of two bits.
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\begin{definition}
+Carry-in Bit: the carry-in bit represents a 1-bit overflow from a previous addition operation. Because a full adder is intended to be modular, and build adders of multiple bits, it is important that the previous operation be available. For purposes of this lab, the carry-in for a 1 bit adder will be tied to ground.
+\end{definition}
+
+\begin{definition}
+	Carry-out Bit: the carry-out bit represents a 1-bit overflow from the current addition operation. This can either be used to signal an error condition or to tie this adder in with multiple full adders. The result of this addition operation will either between 0 and 3. If the output is 2 or 3, the carry-out bit will be HIGH to signal that there is an additional bit needed to represent the results of this operation.
+\end{definition}
 
 \subsubsection{Design Solution}
 
