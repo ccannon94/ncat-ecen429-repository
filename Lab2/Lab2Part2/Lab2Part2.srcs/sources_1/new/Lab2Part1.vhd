@@ -42,7 +42,7 @@ architecture Behavioral of Lab2Part1 is
 
 begin
 
-out1 <= a and (not sel);
+out1 <= (not a) and sel;
 out2 <= a and sel;
 
 end Behavioral;
