@@ -43,7 +43,7 @@ architecture Behavioral of Lab2Part3 is
 
 begin
 
-sum <= ((not a) and b and cin) or (a and (not b) and cin) or (a and b and (not cin)) or (a and b and cin) or (a and (not b) and (not cin)) or (b and (not a) and (not cin)) or (cin and (not a) and (not b));
+sum <= (a and b and cin) or (a and (not b) and (not cin)) or (b and (not a) and (not cin)) or (cin and (not a) and (not b));
 cout <= (cin and (a or b)) or (a and b);
 
 end Behavioral;
