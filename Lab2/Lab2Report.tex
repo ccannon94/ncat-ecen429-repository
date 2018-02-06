@@ -64,7 +64,7 @@ As discussed in the background for this problem, a seven-segment display can onl
 \begin{center}
 	\begin{tabular}{| l | l | l |}
 		\hline
-		Bit & Seven-Segment & Addres \\ \hline
+		Bit & Seven-Segment & Address \\ \hline
 		out1 & a & W7 \\ \hline
 		out2 & b & W6 \\ \hline
 		out3 & c & U8 \\ \hline
@@ -107,9 +107,114 @@ As discussed in the background for this problem, a seven-segment display can onl
 
 \subsection{Results}
 
+The resulting circuit successfully displayed the digit corresponding to each 4-bit number from 0-9. We were also able to correctly turn off all displays when an input greater than 9 was provided. Initially, the number 6 displayed incorrectly, we activated segment 'f' by mistake, therefore displaying '8'. Once this problem was identified, we were able to quickly address it and provide the correct output.
+
+\begin{center}
+	For the figures ~\ref{fig:sevenSegZero} through ~\ref{fig:sevenSegNine}, switches boxed in red are turned off and switches boxed in green are turned on.
+\end{center}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/0.png}
+\caption{Seven-Segment Display for "0000"}
+\label{fig:sevenSegZero}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/1.png}
+\caption{Seven-Segment Display for "0001"}
+\label{fig:sevenSegOne}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/2.png}
+\caption{Seven-Segment Display for "0010"}
+\label{fig:sevenSegTwo}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/3.png}
+\caption{Seven-Segment Display for "0011"}
+\label{fig:sevenSegThree}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/4.png}
+\caption{Seven-Segment Display for "0100"}
+\label{fig:sevenSegFour}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/5.png}
+\caption{Seven-Segment Display for "0101"}
+\label{fig:sevenSegFive}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/6.png}
+\caption{Seven-Segment Display for "0110"}
+\label{fig:sevenSegSix}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/7.png}
+\caption{Seven-Segment Display for "0111"}
+\label{fig:sevenSegSeven}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/8.png}
+\caption{Seven-Segment Display for "0100"}
+\label{fig:sevenSegEight}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part1/9.png}
+\caption{\label{fig: fig-name} Seven-Segment Display for "1001"}
+\label{fig:sevenSegNine}
+\end{center}
+\end{figure}
+
+\pagebreak
+
 \subsection{Problem 2 1:2 Decoder}
 
 \subsubsection{Background}
+
+The 1:2 decoder will accept a 1-bit input 'a', and is controlled by the bit 'sel'. The output is made up of bits 'out1' and 'out2'. The ports are described in Table ~\ref{tab:decoderPort}.
+
+\begin{table}[h]
+\begin{center}
+		\begin{tabular}{| l | l | l |}
+			\hline
+			Bit & Label & Address \\ \hline
+			a & Switch 0 & V17 \\ \hline
+			sel & Switch 1 & V16 \\ \hline
+			out1 & LED 0 & U16 \\ \hline
+			out2 & LED 1 & E19 \\ \hline
+		\end{tabular}
+		\caption{\label{tab: tab-name} Input and output port assignments for 1:2 decoder.}
+		\label{tab:decoderPort}
+\end{center}
+\end{table}
 
 \subsubsection{Design Solution}
 
