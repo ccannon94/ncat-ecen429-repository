@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu Feb  1 14:50:47 2018
-# Process ID: 4868
+# Start of session at: Thu Feb  8 13:00:17 2018
+# Process ID: 13188
 # Current directory: C:/Users/student/Desktop/ncat-ecen429-repository/Lab2/Lab2Part2/Lab2Part2.runs/impl_1
 # Command line: vivado.exe -log Lab2Part1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Lab2Part1.tcl -notrace
 # Log file: C:/Users/student/Desktop/ncat-ecen429-repository/Lab2/Lab2Part2/Lab2Part2.runs/impl_1/Lab2Part1.vdi

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Feb  8 13:56:05 2018
+| Date         : Thu Feb  8 14:29:39 2018
 | Host         : DESKTOP-C4F8K0T running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Lab3Part1_utilization_placed.rpt -pb Lab3Part1_utilization_placed.pb
 | Design       : Lab3Part1
@@ -113,8 +113,8 @@ Table of Contents
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
 | Bonded IOB                  |    8 |     8 |       106 |  7.55 |
-|   IOB Master Pads           |    1 |       |           |       |
-|   IOB Slave Pads            |    7 |       |           |       |
+|   IOB Master Pads           |    3 |       |           |       |
+|   IOB Slave Pads            |    5 |       |           |       |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
