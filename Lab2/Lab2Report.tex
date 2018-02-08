@@ -438,45 +438,192 @@ During this lab, we were able to successfully complete and document all three de
 
 \pagebreak
 
-\begin{appendicies}
+\begin{appendices}
 	
 	\section{Problem 1 VHDL Code}
 	
 	\begin{lstlisting}[language=VHDL]
-		
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab2Part1 is
+    Port ( x : in STD_LOGIC_VECTOR(3 downto 0);
+           da : out STD_LOGIC;
+           db : out STD_LOGIC;
+           dc : out STD_LOGIC;
+           dd : out STD_LOGIC;
+           de : out STD_LOGIC;
+           df : out STD_LOGIC;
+           dg : out STD_LOGIC);
+end Lab2Part1;
+
+architecture Behavioral of Lab2Part1 is
+
+begin
+
+    process(x)
+        begin
+        case x is
+        when "0000" =>
+            da <= '0';
+            db <= '0';
+            dc <= '0';
+            dd <= '0';
+            de <= '0';
+            df <= '0';
+            dg <= '1';
+        when "0001" =>
+            da <= '1';
+            db <= '0';
+            dc <= '0';
+            dd <= '1';
+            de <= '1';
+            df <= '1';
+            dg <= '1';
+        when "0010" =>
+            da <= '0';
+            db <= '0';
+            dc <= '1';
+            dd <= '0';
+            de <= '0';
+            df <= '1';
+            dg <= '0';
+        when "0011" =>
+            da <= '0';
+            db <= '0';
+            dc <= '0';
+            dd <= '0';
+            de <= '1';
+            df <= '1';
+            dg <= '0';
+        when "0100" =>
+            da <= '1';
+            db <= '0';
+            dc <= '0';
+            dd <= '1';
+            de <= '1';
+            df <= '0';
+            dg <= '0';
+        when "0101" =>
+            da <= '0';
+            db <= '1';
+            dc <= '0';
+            dd <= '0';
+            de <= '1';
+            df <= '0';
+            dg <= '0';
+        when "0110" =>
+            da <= '0';
+            db <= '1';
+            dc <= '0';
+            dd <= '0';
+            de <= '0';
+            df <= '0';
+            dg <= '0';
+        when "0111" =>
+            da <= '0';
+            db <= '0';
+            dc <= '0';
+            dd <= '1';
+            de <= '1';
+            df <= '1';
+            dg <= '1';
+        when "1000" =>
+            da <= '0';
+            db <= '0';
+            dc <= '0';
+            dd <= '0';
+            de <= '0';
+            df <= '0';
+            dg <= '0';
+        when "1001" =>
+            da <= '0';
+            db <= '0';
+            dc <= '0';
+            dd <= '0';
+            de <= '1';
+            df <= '0';
+            dg <= '0';
+        when others =>
+            da <= '1';
+            db <= '1';
+            dc <= '1';
+            dd <= '1';
+            de <= '1';
+            df <= '1';
+            dg <= '1';
+        end case;
+    end process;
+end Behavioral;
 	\end{lstlisting}
 
 	
 	\section{Problem 1 Constraints File}
 	
 	\begin{figure}[h]
-	\includegraphics[width=\textwidth]{report_images/img5}
+	\includegraphics[width=\textwidth]{report-images/img5}
 	\end{figure}
 	
 	\section{Problem 2 VHDL Code}
 	
 	\begin{lstlisting}[language=VHDL]
-		
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity Lab2Part1 is
+    Port ( a : in STD_LOGIC;
+           sel : in STD_LOGIC;
+           out1 : out STD_LOGIC;
+           out2 : out STD_LOGIC);
+end Lab2Part1;
+
+architecture Behavioral of Lab2Part1 is
+
+begin
+
+out1 <= (not a) and sel;
+out2 <= a and sel;
+
+end Behavioral;	
 	\end{lstlisting}
 	
 	\section{Problem 2 Constraints File}
 	
 	\begin{figure}[h]
-	\includegraphics[width=\textwidth]{report_images/img6}
+	\includegraphics[width=\textwidth]{report-images/img6}
 	\end{figure}
 	
 	\section{Problem 3 VHDL Code}
 	
 	\begin{lstlisting}[language=VHDL]
-		
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab2Part3 is
+    Port ( cin : in STD_LOGIC;
+           a : in STD_LOGIC;
+           b : in STD_LOGIC;
+           cout : out STD_LOGIC;
+           sum : out STD_LOGIC);
+end Lab2Part3;
+
+architecture Behavioral of Lab2Part3 is
+
+begin
+
+sum <= (a and b and cin) or (a and (not b) and (not cin)) or (b and (not a) and (not cin)) or (cin and (not a) and (not b));
+cout <= (cin and (a or b)) or (a and b);
+
+end Behavioral;
 	\end{lstlisting}
 	
 	\section{Problem 3 Constraints File}
 	
 	\begin{figure}[h]
-	\includegraphics[width=\textwidth]{report_images/img7}
+	\includegraphics[width=\textwidth]{report-images/img7}
 	\end{figure}
 	
-\end{appendicies}
+\end{appendices}
 
 \end{document}
