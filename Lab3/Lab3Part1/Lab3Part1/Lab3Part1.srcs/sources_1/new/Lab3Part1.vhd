@@ -45,21 +45,12 @@ entity full_adder is
 
 end full_adder;
 
-
-
 architecture Behavioral of full_adder is
 
-
-
 begin
-
-
-
 sum <= (a and b and cin) or (a and (not b) and (not cin)) or (b and (not a) and (not cin)) or (cin and (not a) and (not b));
 
 cout <= (cin and (a or b)) or (a and b);
-
-
 
 end Behavioral;
 
