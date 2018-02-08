@@ -107,7 +107,17 @@ As discussed in the background for this problem, a seven-segment display can onl
 \end{center}
 \end{table}
 
-\subsection{Results}
+The circuit design representing a driver for a seven-segment display is displayed in Figure ~\ref{fig: sevenSegSchematic}.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.75\textwidth]{report-images/img2.png}
+	\caption{\label{fig: sevenSegSchematic} Circuit schematic for binary-coded decimal to seven-segment display driver.}
+	\label{fig:sevenSegSchematic}
+\end{center}
+\end{figure}
+
+\subsubsection{Results}
 
 The resulting circuit successfully displayed the digit corresponding to each 4-bit number from 0-9. We were also able to correctly turn off all displays when an input greater than 9 was provided. Initially, the number 6 displayed incorrectly, we activated segment 'f' by mistake, therefore displaying '8'. Once this problem was identified, we were able to quickly address it and provide the correct output.
 
@@ -237,7 +247,53 @@ The decoder will only produce input when 'sel', the enable bit, is HIGH. When 's
 \end{center}
 \end{table}
 
+The circuit design representing a 1:2 decoder is shown in Figure ~\ref{fig: decoderSchematic}.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.75\textwidth]{report-images/img3.png}
+	\caption{\label{fig: decoderSchematic} Circuit schematic for 1:2 decoder.}
+	\label{fig:decoderSchematic}
+\end{center}
+\end{figure}
+
 \subsubsection{Results}
+
+Our first test of the 1:2 decoder revealed a flaw, where one of the if statements in our code had its boolean logic flipped. However, after briefly troubleshooting the issue, we were able to adjust the code accordingly and retrieve appropriate output. Figures ~\ref{fig: decoderImgOne} through ~\ref{fig: decoderImgFour} show the output displayed under all possible inputs. Switches outlined in red are giving HIGH or '1' input, and switches outlined in green are giving LOW or '0' input. Switches not outlined are not utilized by our design. Outlines are for the reader's information only.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part2/IMG_0445.jpg}
+\caption{Input is '0', decoder is not active.}
+\label{fig:decoderImgOne}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part2/IMG_0446.jpg}
+\caption{Input is '0', decoder is active.}
+\label{fig:decoderImgTwo}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part2/IMG_0447.jpg}
+\caption{Input is '1', decoder is active.}
+\label{fig:decoderImgThree}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part2/IMG_0448.jpg}
+\caption{Input is '1', decoder is not active.}
+\label{fig:decoderImgFour}
+\end{center}
+\end{figure}
+
+\pagebreak
 
 \subsection{Problem 3 SUM of a Full Adder}
 
@@ -296,8 +352,131 @@ Our full bit adder uses switches as all inputs and LEDs as outputs. The port ass
 \end{center}	
 \end{table}
 
+The circuit for our full adder is shown in Figure ~\ref{fig: adderSchematic}.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.75\textwidth]{report-images/img4.png}
+	\caption{\label{fig: adderSchematic} Circuit schematic for a single bit full adder.}
+	\label{fig:adderSchematic}
+\end{center}
+\end{figure}
+
 \subsubsection{Results}
 
+The full adder behaved as expected, displaying a carry-out bit if the input exceeded 1. This is because a 1-bit number can only represent 0 or 1. Since the possible outcomes for this operation were 0 through 3, overflow was possible. In the Figures for this result Figures ~\ref{fig: fullAdderImgOne} through ~\ref{fig: fullAdderImgEight}, switches are highlighted in red to show LOW, or '0' input, and green to show HIGH, or '1' input. This highlighting is purely for the convenience of the reader.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0449.jpg}
+\caption{Addition of 0 + 0 with no carry-in.}
+\label{fig:fullAdderImgOne}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0450.jpg}
+\caption{Addition of 0 + 1 with no carry-in.}
+\label{fig:fullAdderImgTwo}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0451.jpg}
+\caption{Addition of 1 + 0 with no carry-in.}
+\label{fig:fullAdderImgThree}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0452.jpg}
+\caption{Addition of 1 + 1  with no carry-in.}
+\label{fig:fullAdderImgFour}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0453.jpg}
+\caption{Addition of 0 + 0  with '1' carried in.}
+\label{fig:fullAdderImgFive}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0454.jpg}
+\caption{Addition of 0 + 1 w with '1' carried in.}
+\label{fig:fullAdderImgSix}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0455.jpg}
+\caption{Addition of 1 + 0  with '1' carried in.}
+\label{fig:fullAdderImgSeven}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{report-images/Part3/IMG_0456.jpg}
+\caption{Addition of 1 + 1  with '1' carried in.}
+\label{fig:fullAdderImgEight}
+\end{center}
+\end{figure}
+
+\pagebreak
+
 \section{Conclusion}
+
+During this lab, we were able to successfully complete and document all three design problems. As mentioned in our design processes above, we had several instances where a boolean expression was reserved or some small coding error caused our design to fail. However, this served as a great learning experience because we learned how to debug with the hardware in our hands. For example, when writing the code for the 1:2 decoder, the case where 'A' was active and 'sel' was off was reversed, so we wound up activating the zero output bit when the decoder was not supposed to be one. After observing this phenomenon and comparing it to our code, we identified the line with the error and made the appropriate adjustments. One technical challenge during this lab was the "active-low" output required to work with the seven-segment display. In much of our early electrical and computer engineering classes, "on" is almost always synonymous with digital HIGH. Converting our thought process to make a truth table where '0' represented an output that was on proved difficult, but we were successful. Now that this lab is completed, one interesting tool we now have is the ability to scale our full adder to do multiple bit arithmetic. Once we have a full adder component, it is trivial to scale it to as many bits as we'd like. The building blocks we have developed in this lab will surely be instrumental in future labs and our design processes in our careers.
+
+\pagebreak
+
+\begin{appendicies}
+	
+	\section{Problem 1 VHDL Code}
+	
+	\begin{lstlisting}[language=VHDL]
+		
+	\end{lstlisting}
+
+	
+	\section{Problem 1 Constraints File}
+	
+	\begin{figure}[h]
+	\includegraphics[width=\textwidth]{report_images/img5}
+	\end{figure}
+	
+	\section{Problem 2 VHDL Code}
+	
+	\begin{lstlisting}[language=VHDL]
+		
+	\end{lstlisting}
+	
+	\section{Problem 2 Constraints File}
+	
+	\begin{figure}[h]
+	\includegraphics[width=\textwidth]{report_images/img6}
+	\end{figure}
+	
+	\section{Problem 3 VHDL Code}
+	
+	\begin{lstlisting}[language=VHDL]
+		
+	\end{lstlisting}
+	
+	\section{Problem 3 Constraints File}
+	
+	\begin{figure}[h]
+	\includegraphics[width=\textwidth]{report_images/img7}
+	\end{figure}
+	
+\end{appendicies}
 
 \end{document}
