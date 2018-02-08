@@ -45,7 +45,7 @@ This problem prompted us to utilize the seven-segment display on the Basys3 boar
 \end{figure}
 
 \subsubsection{Design Solution}
-As discussed in the background for this problem, a seven-segment display can only display a single-digit 0-9. We have to use a 4-bit number in order to represent 9 (1001b) however, 10-15 (1010b-1111b) cannot be displayed using a single seven-segment display. In our code, this will be treated as an error condition where no data will be displayed on the seven-segment display. The 4-bit input will be x3 down to x0, with x3 as the most significant bit, and the output bits have been defined in the assignment. The input pin assignments are defined in Table ~\ref{tab:sevenSigInput} and the output pin assignments as well as their segment are defined in Table ~\ref{tab:sevenSigOutput}. The truth table for our seven segment decoder is shown in Table ~\ref{tab:sevenSegTruthTable}. During our design process, we remembered that the seven-segment display is "active-low", meaning that a '0' is treated as "ON" and a '1' is treated as "OFF". This was important when designing our truth table.
+As discussed in the background for this problem, a seven-segment display can only display a single-digit 0-9. We have to use a 4-bit number in order to represent 9 (1001b) however, 10-15 (1010b-1111b) cannot be displayed using a single seven-segment display. In our code, this will be treated as an error condition where no data will be displayed on the seven-segment display. The 4-bit input will be x3 down to x0, with x3 as the most significant bit, and the output bits have been defined in the assignment. The input pin assignments are defined in Table ~\ref{tab:sevenSegInput} and the output pin assignments as well as their segment are defined in Table ~\ref{tab:sevenSegOutput}. The truth table for our seven segment decoder is shown in Table ~\ref{tab:sevenSegTruthTable}. During our design process, we remembered that the seven-segment display is "active-low", meaning that a '0' is treated as "ON" and a '1' is treated as "OFF". This was important when designing our truth table.
 
 \begin{table}[h]
 \begin{center}
@@ -259,7 +259,7 @@ The circuit design representing a 1:2 decoder is shown in Figure ~\ref{fig: deco
 
 \subsubsection{Results}
 
-Our first test of the 1:2 decoder revealed a flaw, where one of the if statements in our code had its boolean logic flipped. However, after briefly troubleshooting the issue, we were able to adjust the code accordingly and retrieve appropriate output. Figures ~\ref{fig: decoderImgOne} through ~\ref{fig: decoderImgFour} show the output displayed under all possible inputs. Switches outlined in red are giving HIGH or '1' input, and switches outlined in green are giving LOW or '0' input. Switches not outlined are not utilized by our design. Outlines are for the reader's information only.
+Our first test of the 1:2 decoder revealed a flaw, where one of the if statements in our code had its boolean logic flipped. However, after briefly troubleshooting the issue, we were able to adjust the code accordingly and retrieve appropriate output. Figures ~\ref{fig:decoderImgOne} through ~\ref{fig:decoderImgFour} show the output displayed under all possible inputs. Switches outlined in red are giving HIGH or '1' input, and switches outlined in green are giving LOW or '0' input. Switches not outlined are not utilized by our design. Outlines are for the reader's information only.
 
 \begin{figure}[H]
 \begin{center}
@@ -364,7 +364,7 @@ The circuit for our full adder is shown in Figure ~\ref{fig: adderSchematic}.
 
 \subsubsection{Results}
 
-The full adder behaved as expected, displaying a carry-out bit if the input exceeded 1. This is because a 1-bit number can only represent 0 or 1. Since the possible outcomes for this operation were 0 through 3, overflow was possible. In the Figures for this result Figures ~\ref{fig: fullAdderImgOne} through ~\ref{fig: fullAdderImgEight}, switches are highlighted in red to show LOW, or '0' input, and green to show HIGH, or '1' input. This highlighting is purely for the convenience of the reader.
+The full adder behaved as expected, displaying a carry-out bit if the input exceeded 1. This is because a 1-bit number can only represent 0 or 1. Since the possible outcomes for this operation were 0 through 3, overflow was possible. In the Figures for this result Figures ~\ref{fig:fullAdderImgOne} through ~\ref{fig:fullAdderImgEight}, switches are highlighted in red to show LOW, or '0' input, and green to show HIGH, or '1' input. This highlighting is purely for the convenience of the reader.
 
 \begin{figure}[H]
 \begin{center}
