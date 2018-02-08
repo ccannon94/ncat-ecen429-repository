@@ -7,9 +7,9 @@
   <device name="xc7a35t_0" gui_info=""/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a35t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/Users/student/Desktop/ncat-ecen429-repository/Lab3/Lab3Part1/Lab3Part1/Lab3Part1.runs/impl_1/Lab3Part1.bit"/>
-      <Properties Property="SLR.COUNT" value="C:/Users/student/AppData/Roaming/Xilinx/Vivado/1"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/$_project_name_.bit"/>
     </Object>
   </ObjectList>
   <probeset name="hw project" active="false"/>
