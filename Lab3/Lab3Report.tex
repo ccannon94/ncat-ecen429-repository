@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\graphicspath{report_images/}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{amsthm}
+% The next three lines make the table and figure numbers also include section number
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+% Needed to make titling page without a page number
+\usepackage{titling}
+
+% DOCUMENT INFORMATION =================================================
+\title {ECEN 429: Introduction to Digital Systems Design Laboratory \\ North Carolina Agricultural and Technical State University \\ Department of Electrical and Computer Engineering} % Declare Title
+\author{Reporter: Chris Cannon\\ \and Partner: Nikiyah Beulah} % Declare authors
+\date{February 8, 2018}
+% ======================================================================
+
+\begin{document}
+
+\begin{titlingpage}
+\maketitle
+\begin{center}
+	Lab 3
+\end{center}
+\end{titlingpage}
+
+\section{Introduction}
+This lab focuses on building increasingly complex systems that build on each other, which will give us more experience with integrating systems using components. Code reuse is important for any type of software development, including VHDL. Therefore, it is important that we understand how to nest components to build more complex systems from basic building blocks. We start by creating an adder circuit for two 2-bit numbers, and we build more complex circuits that utilize those systems for more advanced operations.
+
+\section{Background, Design Solution, and Results}
+
+\subsection{Problem 1 Bit Slicer}
+
+\subsubsection{Background}
+For this problem, we are to create a bit slicer that will add two 2-bit numbers 'a' and 'b', as well has handling a carry-in bit 'cin'.
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\begin{definition}
+Carry-in Bit: the carry-in bit represents a 1-bit overflow from a previous addition operation. Because a full adder is intended to be modular, and build adders of multiple bits, it is important that the previous operation be available. For purposes of this lab, the carry-in for a 1 bit adder will be tied to ground.
+\end{definition}
+
+The concept of a 2-bit adder was covered in Lab 2, so we had a good starting point for this lab. For reference, the truth table for a single 2-bit adder is defined in ~\ref{tab:fullAddTruthTable}.
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{| l | l | l | l | l |}
+		\hline
+		A & B & CI & SUM & CO \\ \hline
+		0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 1 \\ \hline
+		1 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 1 & 1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:fullAddTruthTable}Truth table for a full adder.}
+	\label{tab:fullAddTruthTable}
+\end{center}
+\end{table}
+
+\subsubsection{Design Solution}
+To implement our design, we decided to use two full-adders. We were able to reuse our code from Lab 2 to create the full-adder entity, and then implement this design using two components. Because we abstracted our full-adder using a component, we had to write less actual code, which made our solution both cleaner and easier to read. For our inputs, we used 'a2' and 'a1' to represent our first 2-bit number, and 'b2' and 'b1' to represent our second 2-bit number. 'ci' of course represents out carry-in bit. The output sum is represented by bits `x2` and `x1`, and the carry-out bit is represented as `cout`. The truth table for this entire circuit is given in Table ~\ref{tab:stupidlyLongSlicerTruthTable}.
+
+\begin{definition}
+	Carry-out Bit: the carry-out bit represents a 1-bit overflow from the current addition operation. This can either be used to signal an error condition or to tie this adder in with multiple full adders. The result of this addition operation will either between 0 and 3. If the output is 2 or 3, the carry-out bit will be HIGH to signal that there is an additional bit needed to represent the results of this operation.
+\end{definition}
+
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{| l | l | l | l | l | l | l | l |}
+		\hline
+		cin & a2 & a1 & b2 & b1 & cout & x2 & x1 \\ \hline
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\ \hline
+		0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\ \hline
+		0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 \\ \hline
+		0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\ \hline
+		0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\ \hline
+		0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\ \hline
+		0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 \\ \hline
+		0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\ \hline
+		0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\ \hline
+		0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 1 & 0 & 1 & 0 & 1 \\ \hline
+		0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 \\ \hline
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+		1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\ \hline
+		1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\ \hline
+		1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \\ \hline
+		1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:stupidlyLongSlicerTruthTable}Truth table for the problem 1 solution.}
+\end{center}
+\end{table}
+
+\end{document}
