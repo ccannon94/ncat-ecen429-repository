@@ -69,7 +69,7 @@ The concept of a 2-bit adder was covered in Lab 2, so we had a good starting poi
 \end{table}
 
 \subsubsection{Design Solution}
-To implement our design, we decided to use two full-adders. We were able to reuse our code from Lab 2 to create the full-adder entity, and then implement this design using two components. Because we abstracted our full-adder using a component, we had to write less actual code, which made our solution both cleaner and easier to read. For our inputs, we used 'a2' and 'a1' to represent our first 2-bit number, and 'b2' and 'b1' to represent our second 2-bit number. 'ci' of course represents out carry-in bit. The output sum is represented by bits `x2` and `x1`, and the carry-out bit is represented as `cout`. The truth table for this entire circuit is given in Table ~\ref{tab:stupidlyLongSlicerTruthTable}.
+To implement our design, we decided to use two full-adders. We were able to reuse our code from Lab 2 to create the full-adder entity, and then implement this design using two components. Because we abstracted our full-adder using a component, we had to write less actual code, which made our solution both cleaner and easier to read. For our inputs, we used 'a2' and 'a1' to represent our first 2-bit number, and 'b2' and 'b1' to represent our second 2-bit number. 'ci' of course represents out carry-in bit. The output sum is represented by bits `x2` and `x1`, and the carry-out bit is represented as `cout`. The truth table for this entire circuit is given in Table ~\ref{tab:stupidlyLongSlicerTruthTable}. The pin assignments for this design are given in Table ~\ref{tab:slicerPinAssignments}.
 
 \begin{definition}
 	Carry-out Bit: the carry-out bit represents a 1-bit overflow from the current addition operation. This can either be used to signal an error condition or to tie this adder in with multiple full adders. The result of this addition operation will either between 0 and 3. If the output is 2 or 3, the carry-out bit will be HIGH to signal that there is an additional bit needed to represent the results of this operation.
@@ -116,5 +116,36 @@ To implement our design, we decided to use two full-adders. We were able to reus
 	\caption{\label{tab:stupidlyLongSlicerTruthTable}Truth table for the problem 1 solution.}
 \end{center}
 \end{table}
+
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Bit & Label & Port \\ \hline
+		a1 & Switch 0 & V17 \\ \hline
+		a2 & Switch 1 & V16 \\ \hline
+		b1 & Switch 2 & W16 \\ \hline
+		b2 & Switch 3 & W17 \\ \hline
+		cin & Switch 4 & W15 \\ \hline
+		x1 & LED 0 & U16 \\ \hline
+		x2 & LED 1 & E19 \\ \hline
+		cout & LED 2 & V 19 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:slicerPinAssignments}Port assignment for each bit used in Problem 1.}
+\end{center}
+\end{table}
+
+\subsubsection{Results}
+
+%TODO: ADD CODE HERE
+
+\subsection{Problem 2 2:1 Multiplexer}
+
+\subsubsection{Background}
+Using the bit slicer developed in Problem 1, we will feed the outputs into a 2:1 multiplexer with a 1-bit `sel` input. 
+
+\begin{definition}
+	Multiplexer: A multiplexer, or mux, is a digital device that can "pass-through" values depending on a selector input. For example, a 2:1 mux with a 1-bit selector and inputs 'a' and 'b' will output input 'a' when the selector input is '0' or LOW and will output 'b' when the selector input is '1' or HIGH.
+\end{definition}
 
 \end{document}
