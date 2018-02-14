@@ -129,7 +129,7 @@ To implement our design, we decided to use two full-adders. We were able to reus
 		cin & Switch 4 & W15 \\ \hline
 		x1 & LED 0 & U16 \\ \hline
 		x2 & LED 1 & E19 \\ \hline
-		cout & LED 2 & V 19 \\ \hline
+		cout & LED 2 & V19 \\ \hline
 	\end{tabular}
 	\caption{\label{tab:slicerPinAssignments}Port assignment for each bit used in Problem 1.}
 \end{center}
@@ -137,7 +137,7 @@ To implement our design, we decided to use two full-adders. We were able to reus
 
 \subsubsection{Results}
 
-%TODO: ADD CODE HERE
+%TODO: ADD PHOTOS HERE
 
 \subsection{Problem 2 2:1 Multiplexer}
 
@@ -151,6 +151,129 @@ Using the bit slicer developed in Problem 1, we will feed the outputs into a 2:1
 The multiplexer in this problem is supposed to output the sum of the bit slicer operation when the 'sel' bit is '1' or HIGH. The sum refers to \textit{only} the two bit output of the sum operation. In this lab, we referred to these outputs as 'x2' and 'x1', where 'x2' is the most significant bit. When the 'sel' bit is '0' or LOW, the circuit is supposed to output the carry-out bit 'cout'. 
 
 \subsubsection{Design Solution}
-To implement this design, we reused the code from Problem one, and used it as a component. Therefore, we only had to declare and instantiate the component, not redefine the architecture.
+To implement this design, we reused the code from Problem one, and used it as a component. Therefore, we only had to declare and instantiate the component, not redefine the architecture. Based on the assignment given in the Background section above, we knew that we had to basically double our truth table. If the 'sel' bit is HIGH or '1', we will output 'x2' and 'x1'. When the 'sel' bit is LOW or '0', we will output just the 'cout' bit. Tables ~\ref{tab:selOneTruthTable} and ~\ref{tab:selZeroTruthTable} provide the truth tables for this design. We have summarized our port assignments in Table ~\ref{tab:ledMuxPorts}.
+
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Bit & Label & Port \\ \hline
+		a1 & Switch 0 & V17 \\ \hline
+		a2 & Switch 1 & V16 \\ \hline
+		b1 & Switch 2 & W16 \\ \hline
+		b2 & Switch 3 & W17 \\ \hline
+		cin & Switch 4 & W15 \\ \hline
+		sel & Switch 5 & V15 \\ \hline
+		x1 & LED 0 & U16 \\ \hline
+		x2 & LED 1 & E19 \\ \hline
+		cout & LED 2 & V19 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:ledMuxPorts}Input and output pin assignments for the multiplexer circuit.}
+\end{center}	
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{| l | l | l | l | l | l | l | l | l |}
+		\hline
+		sel & cin & a2 & a1 & b2 & b1 & cout & x2 & x1 \\ \hline
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\ \hline
+		1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\ \hline
+		1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 1 \\ \hline
+		1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\ \hline
+		1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\ \hline
+		1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\ \hline
+		1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 \\ \hline
+		1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\ \hline
+		1 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\ \hline
+		1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 \\ \hline
+		1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		1 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 1 \\ \hline
+		1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 \\ \hline
+		1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:selOneTruthTable}This table shows the outputs displayed when the 'sel' bit is '1' or HIGH. The only output should be from the sum bits 'x2' and 'x1'.}
+\end{center}	
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+	\begin{tabular}{| l | l | l | l | l | l | l | l | l |}
+		\hline
+		sel & cin & a2 & a1 & b2 & b1 & cout & x2 & x1 \\ \hline
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+		0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 \\ \hline
+	\end{tabular}
+	\caption{\label{tab:selZeroTruthTable}This table shows the outputs displayed when the 'sel' bit is '0' or LOW. The only output should be the carry-out bit 'cout'.}
+\end{center}
+\end{table}
+
+\subsubsection{Results}
+
+% ADD PHOTOS HERE
+
+\subsection{Problem 3 2:1 Multiplexer with Seven-Segment Output}
+
+\subsubsection{Background}
+For this problem, we are to utilize the seven-segment display to output our result from the circuit in Problem 2. Basically, if we are to output the sum, then we should display 0, 1, 2, or 3 on the seven-segment display. If we are to display the carry-out, then we will display 0 or 1.
+
+\subsubsection{Design Solution}
+The truth table for this circuit will be the same truth table shown in Figures ~\ref{tab:selZeroTruthTable} and ~\ref{tab:selOneTruthTable}, however output will be shown utilizing the seven-segment displays. A diagram of a segment display is shown in Figure ~\ref{fig:sevenSegFigure}.
+
+\begin{figure}[h]
+\begin{center}
+	\includegraphics[width=0.2\textwidth]{../Lab2/report-images/img1.png}
+	\caption{\label{fig:sevenSegFigure}Diagram of seven-segment display showing the assigned letter for each segment.}
+\end{center}
+\end{figure}
 
 \end{document}
