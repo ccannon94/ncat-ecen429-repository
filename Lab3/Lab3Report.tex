@@ -148,4 +148,9 @@ Using the bit slicer developed in Problem 1, we will feed the outputs into a 2:1
 	Multiplexer: A multiplexer, or mux, is a digital device that can "pass-through" values depending on a selector input. For example, a 2:1 mux with a 1-bit selector and inputs 'a' and 'b' will output input 'a' when the selector input is '0' or LOW and will output 'b' when the selector input is '1' or HIGH.
 \end{definition}
 
+The multiplexer in this problem is supposed to output the sum of the bit slicer operation when the 'sel' bit is '1' or HIGH. The sum refers to \textit{only} the two bit output of the sum operation. In this lab, we referred to these outputs as 'x2' and 'x1', where 'x2' is the most significant bit. When the 'sel' bit is '0' or LOW, the circuit is supposed to output the carry-out bit 'cout'. 
+
+\subsubsection{Design Solution}
+To implement this design, we reused the code from Problem one, and used it as a component. Therefore, we only had to declare and instantiate the component, not redefine the architecture.
+
 \end{document}
