@@ -1,0 +1,672 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 8384
+License: Customer
+
+Current time: 	Tue Feb 13 16:27:07 EST 2018
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 2
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 203 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Users/swphilly1972/Desktop/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Users/swphilly1972/Desktop/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	swphilly1972
+User home directory: C:/Users/swphilly1972
+User working directory: C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Users/swphilly1972/Desktop/Vivado
+HDI_APPROOT: C:/Users/swphilly1972/Desktop/Vivado/2017.4
+RDI_DATADIR: C:/Users/swphilly1972/Desktop/Vivado/2017.4/data
+RDI_BINDIR: C:/Users/swphilly1972/Desktop/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/swphilly1972/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/swphilly1972/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/swphilly1972/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Users/swphilly1972/Desktop/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3/vivado.log
+Vivado journal file location: 	C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3/vivado.jou
+Engine tmp dir: 	C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3/.Xil/Vivado-8384-tony
+
+GUI allocated memory:	184 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 470 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 27 MB (+26306kb) [00:00:22]
+// [Engine Memory]: 399 MB (+267098kb) [00:00:22]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// [GUI Memory]: 41 MB (+12999kb) [00:00:45]
+// [Engine Memory]: 470 MB (+52965kb) [00:00:45]
+// Opening Vivado Project: C:\Users\swphilly1972\Documents\GitHub\ncat-ecen429-repository\Lab3\Lab3Part3\Lab3Part3.xpr. Version: Vivado v2017.4 
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3/Lab3Part3.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 470 MB. GUI used memory: 33 MB. Current time: 2/13/18 4:27:10 PM EST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3/Lab3Part3.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab3/Lab3Part3' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [Engine Memory]: 497 MB (+4090kb) [00:00:56]
+// [GUI Memory]: 45 MB (+1981kb) [00:01:11]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 57 MB (+9664kb) [00:01:17]
+// [Engine Memory]: 527 MB (+4791kb) [00:01:17]
+// [GUI Memory]: 60 MB (+498kb) [00:01:22]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/swphilly1972/Desktop/Vivado/2017.4/data/ip'. 
+// Project name: Lab3Part3; location: C:/Users/swphilly1972/Documents/GitHub/ncat-ecen429-repository/Lab3/Lab3Part3; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 731.566 ; gain = 60.922 
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 549 MB. GUI used memory: 35 MB. Current time: 2/13/18 4:28:02 PM EST
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 65 MB (+1893kb) [00:01:52]
+// [Engine Memory]: 557 MB (+4202kb) [00:01:52]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 24 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// PAPropertyPanels.initPanels (sim_1) elapsed time: 3.7s
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mux_adder(Behavioral_Three) (mux_adder.vhd)]", 7, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files]", 6); // B (D, cj)
+// PAPropertyPanels.initPanels (Lab3Part3.vhd) elapsed time: 0.7s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files, Lab3Part3.vhd]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mux_adder(Behavioral_Three) (mux_adder.vhd)]", 8, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mux_adder(Behavioral_Three) (mux_adder.vhd)]", 8, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mux_adder(Behavioral_Three) (mux_adder.vhd), adder : two_bit_adder(Behavioral_Two) (mux_adder.vhd)]", 9, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// [GUI Memory]: 71 MB (+2576kb) [00:02:38]
+// [GUI Memory]: 75 MB (+914kb) [00:02:45]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mux_adder(Behavioral_Three) (mux_adder.vhd), adder : two_bit_adder(Behavioral_Two) (mux_adder.vhd)]", 9, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, mux_adder(Behavioral_Three) (mux_adder.vhd), adder : two_bit_adder(Behavioral_Two) (mux_adder.vhd), adder_two : full_adder(Behavioral) (mux_adder.vhd)]", 11, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files, Lab3Part3.vhd]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files, Lab3Part3.vhd]", 7, false, false, false, false, false, true); // B (D, cj) - Double Click
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 573 MB. GUI used memory: 40 MB. Current time: 2/13/18 4:29:25 PM EST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 1); // k (j, cj)
+// [GUI Memory]: 80 MB (+1198kb) [00:03:16]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 2); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 346, 131); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 131, 149); // cd (w, cj)
+// Elapsed time: 58 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 1); // k (j, cj)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 2); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 100, 30); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 2); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 85, 28); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 135, 28); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 116, 78); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 116, 78, false, false, false, false, true); // cd (w, cj) - Double Click
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+selectCodeEditor("Lab3Part3.vhd", 117, 64); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 117, 64, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 109, 64); // cd (w, cj)
+// Elapsed time: 31 seconds
+selectCodeEditor("Lab3Part3.vhd", 87, 61); // cd (w, cj)
+// [GUI Memory]: 84 MB (+286kb) [00:09:07]
+// Elapsed time: 381 seconds
+selectCodeEditor("Lab3Part3.vhd", 19, 24); // cd (w, cj)
+// Elapsed time: 147 seconds
+selectCodeEditor("Lab3Part3.vhd", 42, 80); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 42, 80); // cd (w, cj)
+// Elapsed time: 82 seconds
+selectCodeEditor("Lab3Part3.vhd", 24, 129); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 17, 90); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 68, 147); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Lab3Part3.vhd", 60, 97); // cd (w, cj)
+// Elapsed time: 67 seconds
+selectCodeEditor("Lab3Part3.vhd", 25, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 25, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 25, 95); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("Lab3Part3.vhd", 47, 111); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 19, 96); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 26, 111); // cd (w, cj)
+// [GUI Memory]: 89 MB (+308kb) [00:18:15]
+// Elapsed time: 32 seconds
+selectCodeEditor("Lab3Part3.vhd", 18, 111); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 63, 112); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 66, 78); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 63, 98); // cd (w, cj)
+// Elapsed time: 43 seconds
+selectCodeEditor("Lab3Part3.vhd", 76, 93); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 22, 105); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 135, 90); // cd (w, cj)
+// Elapsed time: 30 seconds
+selectCodeEditor("Lab3Part3.vhd", 109, 95); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Lab3Part3.vhd", 11, 109); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 41, 110, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 149, 91); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 138, 93, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+// Elapsed time: 12 seconds
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 190, 94); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 158, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 158, 95, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 158, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 164, 97); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 165, 96); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 73, 106); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 188, 100); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+// [GUI Memory]: 95 MB (+1995kb) [00:21:14]
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectCodeEditor("Lab3Part3.vhd", 76, 80); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("Lab3Part3.vhd", 38, 106); // cd (w, cj)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 31 seconds
+selectCodeEditor("Lab3Part3.vhd", 25, 110); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 65, 79); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 61, 115); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 63, 111); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 51, 129); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 52, 129, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 52, 129); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 87, 145); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 97, 127); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 96, 127, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 96, 127); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 96, 127); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 96, 127); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 96, 127); // cd (w, cj)
+// Elapsed time: 42 seconds
+selectCodeEditor("Lab3Part3.vhd", 84, 149); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 80, 144); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 84, 144); // cd (w, cj)
+// Elapsed time: 50 seconds
+selectCodeEditor("Lab3Part3.vhd", 19, 163); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 20, 161, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 36, 142, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 116, 56); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 116, 56, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 80, 163); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 17, 93); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 17, 112); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 16, 133); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 19, 152); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 15, 159); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 18, 174); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 174, 69); // cd (w, cj)
+// Elapsed time: 44 seconds
+selectCodeEditor("Lab3Part3.vhd", 172, 99); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 181, 81); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 177, 102); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 176, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 175, 116); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 172, 79); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 200, 80); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 195, 78); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 190, 76); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 172, 96); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 190, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 177, 118); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 176, 115); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 176, 122); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 173, 147); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 175, 162); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 174, 183); // cd (w, cj)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// Elapsed time: 26 seconds
+selectCodeEditor("Lab3Part3.vhd", 99, 63); // cd (w, cj)
+// Elapsed time: 30 seconds
+selectCodeEditor("Lab3Part3.vhd", 127, 131); // cd (w, cj)
+// Elapsed time: 21 seconds
+selectCodeEditor("Lab3Part3.vhd", 240, 124); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("Lab3Part3.vhd", 113, 132); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Lab3Part3.vhd", 7, 133); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 85, 128); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 30, 130); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 84, 137); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 84, 128); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("Lab3Part3.vhd", 95, 135); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 19, 5); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 67, 130); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 20, 83); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 155, 94, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 47, 138); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 27, 134); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 27, 138); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 26, 145, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 236, 163); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 237, 180); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 237, 98); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 242, 116); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 239, 116); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 239, 126); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 236, 143); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 184, 41); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 184, 41, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 186, 46); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 188, 46); // cd (w, cj)
+// Elapsed time: 23 seconds
+selectCodeEditor("Lab3Part3.vhd", 189, 113); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 191, 128); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 225, 145); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 28, 169); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 21, 164); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 21, 163, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 18, 164); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 237, 129); // cd (w, cj)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// Elapsed time: 10 seconds
+selectCodeEditor("Lab3Part3.vhd", 234, 96); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 237, 117); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 237, 125); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 239, 144); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 236, 164); // cd (w, cj)
+// Elapsed time: 37 seconds
+selectCodeEditor("Lab3Part3.vhd", 180, 63); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 180, 109); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 182, 132); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 239, 123); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 206, 130); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 39, 151); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 22, 154); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 7, 151); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 14, 153, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 239, 161); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 231, 162); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 231, 175); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 229, 85); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 229, 81); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 226, 94); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 228, 116); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 234, 134); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 583 MB. GUI used memory: 42 MB. Current time: 2/13/18 4:59:28 PM EST
+selectCodeEditor("Lab3Part3.vhd", 171, 111); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 171, 97); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 171, 96); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 172, 98); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 171, 98); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 171, 130); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 174, 129); // cd (w, cj)
+// Elapsed time: 60 seconds
+selectCodeEditor("Lab3Part3.vhd", 137, 119); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 37, 119); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 26, 129); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 21, 136); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("Lab3Part3.vhd", 59, 105); // cd (w, cj)
+// Elapsed time: 21 seconds
+selectCodeEditor("Lab3Part3.vhd", 35, 90); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 11, 98); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 15, 94, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 61, 97); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 224, 114); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 4, 98); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 223, 132); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 224, 148); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 223, 162); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 222, 180); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 221, 79); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 222, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 222, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 208, 97); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 11, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 161, 62, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 226, 103); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 212, 99); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 209, 99); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 40, 114); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 5, 110); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 16, 109); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 23, 109, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 15, 104); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 224, 150); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 223, 161); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 225, 176); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 218, 97); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 214, 111); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 219, 125); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 226, 133); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 68, 30); // cd (w, cj)
+// Elapsed time: 262 seconds
+selectCodeEditor("Lab3Part3.vhd", 88, 132); // cd (w, cj)
+// Elapsed time: 42 seconds
+selectCodeEditor("Lab3Part3.vhd", 100, 120); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 64, 110); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 67, 110); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 54, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 59, 45); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 63, 45, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 63, 40); // cd (w, cj)
+// Elapsed time: 39 seconds
+selectCodeEditor("Lab3Part3.vhd", 73, 160); // cd (w, cj)
+// Elapsed time: 32 seconds
+selectCodeEditor("Lab3Part3.vhd", 55, 160); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 55, 160, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 125, 179); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 6, 131); // cd (w, cj)
+typeControlKey((HResource) null, "Lab3Part3.vhd", 'v'); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 15, 146); // cd (w, cj)
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 1); // k (j, cj)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 165, 155); // cd (w, cj)
+// Elapsed time: 59 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 213, 110); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 189, 112); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 94, 51); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 82, 25); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 88, 29); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 83, 27); // cd (w, cj)
+// Elapsed time: 19 seconds
+selectCodeEditor("Lab3Part3.vhd", 229, 75); // cd (w, cj)
+// Elapsed time: 15 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+selectCodeEditor("Lab3Part3.vhd", 543, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 90, 127); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Lab3Part3.vhd", 207, 94); // cd (w, cj)
+// Elapsed time: 74 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+selectCodeEditor("mux_adder.vhd", 82, 46); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("mux_adder.vhd", 81, 20); // cd (w, cj)
+selectCodeEditor("mux_adder.vhd", 243, 163); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("mux_adder.vhd", 287, 92); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectCodeEditor("Lab3Part3.vhd", 214, 109); // cd (w, cj)
+// Elapsed time: 29 seconds
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 2, true, false); // k (j, cj) - Popup Trigger
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mux_adder.vhd", 2); // k (j, cj)
+selectCodeEditor("mux_adder.vhd", 83, 146, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectCodeEditor("mux_adder.vhd", 34, 119); // cd (w, cj)
+selectCodeEditor("mux_adder.vhd", 94, 144); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("mux_adder.vhd", 153, 112); // cd (w, cj)
+selectCodeEditor("mux_adder.vhd", 171, 127); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab3Part3.vhd", 1); // k (j, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Lab3Part3.vhd", 569, 164); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 571, 162, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Lab3Part3.vhd", 571, 162); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 573, 162); // cd (w, cj)
+// Elapsed time: 21 seconds
+selectCodeEditor("Lab3Part3.vhd", 96, 109); // cd (w, cj)
+// Elapsed time: 35 seconds
+selectCodeEditor("Lab3Part3.vhd", 108, 36); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Lab3Part3.vhd", 114, 76); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 117, 96); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 118, 111); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 118, 128); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 117, 145); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 119, 163); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 130, 163); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("Lab3Part3.vhd", 116, 61); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 117, 53); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 59, 54); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 121, 60); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 119, 76); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 119, 93); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 118, 113); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 25, 111); // cd (w, cj)
+// Elapsed time: 34 seconds
+selectCodeEditor("Lab3Part3.vhd", 34, 17); // cd (w, cj)
+// Elapsed time: 54 seconds
+selectCodeEditor("Lab3Part3.vhd", 63, 117); // cd (w, cj)
+// Elapsed time: 54 seconds
+selectCodeEditor("Lab3Part3.vhd", 208, 143); // cd (w, cj)
+// Elapsed time: 26 seconds
+selectCodeEditor("Lab3Part3.vhd", 12, 75); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 153, 35, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 7, 78); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("Lab3Part3.vhd", 29, 46); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 34, 60); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 102, 118); // cd (w, cj)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 61 seconds
+selectCodeEditor("Lab3Part3.vhd", 105, 158); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 105, 172); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 45, 116); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 124, 114); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 117, 113); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 220, 107); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 38, 119); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 34, 121, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+// Elapsed time: 19 seconds
+selectCodeEditor("Lab3Part3.vhd", 126, 42); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 583 MB. GUI used memory: 41 MB. Current time: 2/13/18 7:29:26 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 583 MB. GUI used memory: 40 MB. Current time: 2/13/18 10:29:21 PM EST
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// Elapsed time: 18190 seconds
+selectCodeEditor("Lab3Part3.vhd", 9, 127); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 7, 146); // cd (w, cj)
+// Elapsed time: 34 seconds
+selectCodeEditor("Lab3Part3.vhd", 100, 159); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 100, 159); // cd (w, cj)
+// Elapsed time: 30 seconds
+selectCodeEditor("Lab3Part3.vhd", 33, 155); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 23, 157); // cd (w, cj)
+// WARNING: HTimer (ExpRunMonitor Open Timer) is taking too long to process. Increasing delay to 7000 ms.
+// Elapsed time: 19 seconds
+selectCodeEditor("Lab3Part3.vhd", 6, 14); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 179, 15); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 174, 12); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 185, 13); // cd (w, cj)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// Elapsed time: 13 seconds
+selectCodeEditor("Lab3Part3.vhd", 3, 26); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 159, 24, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 26, 81); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 11, 81, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 19, 75); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 185, 78); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 123, 93); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 120, 92); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 243, 160); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 61, 24); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 179, 41); // cd (w, cj)
+// Elapsed time: 47 seconds
+selectButton(RDIResourceCommand.RDICommands_UNDO, "undo"); // B (f, cj)
+selectCodeEditor("Lab3Part3.vhd", 131, 95); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 123, 89); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 23, 110); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 200, 111, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 39, 33); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 39, 33, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 166, 63); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 231, 57); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 224, 75); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 225, 94); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 223, 117); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 229, 109); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 226, 116); // cd (w, cj)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+selectCodeEditor("Lab3Part3.vhd", 228, 131); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 232, 144); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab3Part3.vhd", 117, 81); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 100, 78); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 101, 78, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ac (ai, Popup.HeavyWeightWindow)
+selectCodeEditor("Lab3Part3.vhd", 15, 158); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("Lab3Part3.vhd", 41, 112); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 103, 111); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 172, 113); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("Lab3Part3.vhd", 120, 42); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 18, 64); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 214, 80); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 221, 78); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 222, 93); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 222, 114); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 221, 130); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 222, 148); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 217, 164); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 220, 164); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 232, 136); // cd (w, cj)
+selectCodeEditor("Lab3Part3.vhd", 218, 133); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
