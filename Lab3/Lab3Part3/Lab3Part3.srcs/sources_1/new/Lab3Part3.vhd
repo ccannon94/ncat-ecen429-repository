@@ -39,16 +39,78 @@ entity Lab3Part3 is
 end Lab3Part3;
 
 architecture Behavioral of Lab3Part3 is
-component mux_adder port(cin, a1, a2, b1, b2, sel : in STD_LOGIC; x2, x1 : out STD_LOGIC);
+component mux_adder port(cin, y1, y2, z1, z2, sel : in STD_LOGIC; x2, x1 : out STD_LOGIC);
 end component mux_adder;
 
-begin
-   out1 <= 
-   out2 <= 
-   out3 <= 
-   out4 <= 
-   out5 <= 
-   out6 <=
-   out7 <= 
+signal c_sig bit;
+signal x1_sig bit;
+signal x2_sig bit;
 
+begin
+
+adder : mux_adder port map(cin => cin, y1 => a1, y2 => a2, z1 => b1, z2 => b2, sel_a => sel, x2 => x2_sig, x1 => x1_sig, cout => c_sig);
+
+process (sel)
+--when sel is  high then display shows 3,2,1,0 depend on x2 and x1 when sel is low then display shows 0, or 1 depend on cout
+   begin
+   case sel is 
+   when '0' =>
+    if cout = '0' then
+      out1 <= '0';
+      out2 <= '0';
+      out3 <= '0';
+      out4 <= '0';
+      out5 <= '0';
+      out6 <= '0';
+      out7 <= '1';
+   else
+    out1 <= '1';
+    out2 <= '0';
+    out3 <= '0';
+    out4 <= '1';
+    out5 <= '1';
+    out6 <= '1';
+    out7 <= '1';
+    end if;
+   
+                 
+ when '1' =>   
+ if (x2='0'and x1='0')then
+                out1 <= '0';
+                out2 <= '0';
+                out3 <= '0';
+                out4 <= '0';
+                out5 <= '0';
+                out6 <= '0';
+                out7 <= '1';  
+ else if (x2='0'and x1='1')then
+                 out1 <= '1';
+                 out2 <= '0';
+                 out3 <= '0';
+                 out4 <= '1';
+                 out5 <= '1';
+                 out6 <= '1';
+                 out7 <= '1'; 
+ else if (x2='1'and x1='0')then           
+                 out1 <= '0';
+                 out2 <= '0';
+                 out3 <= '1';
+                 out4 <= '0';
+                 out5 <= '0';
+                 out6 <= '1';
+                 out7 <= '0'; 
+                                 
+   else if (x2='1'and x1='1')then   
+                 out1 <= '0';
+                 out2 <= '0';
+                 out3 <= '0';
+                 out4 <= '0';
+                 out5 <= '1';
+                 out6 <= '1';
+                 out7 <= '0';  
+                 
+   end if;                                   
+                             
+   end case;
+   end process;              
 end Behavioral;

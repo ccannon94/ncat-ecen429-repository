@@ -54,27 +54,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux_adder is
     Port ( cin : in STD_LOGIC;
-           a1 : in STD_LOGIC;
-           a2 : in STD_LOGIC;
-           b1 : in STD_LOGIC;
-           b2 : in STD_LOGIC;
-           sel : in STD_LOGIC;
+           y1 : in STD_LOGIC;
+           y2 : in STD_LOGIC;
+           z1 : in STD_LOGIC;
+           z2 : in STD_LOGIC;
+           sel_a : in STD_LOGIC;
            x2 : out STD_LOGIC;
            x1: out STD_LOGIC);
 end mux_adder;
 
 architecture Behavioral_Three of mux_adder is
-component two_bit_adder port(cin, a2, a1, b2, b1 : in STD_LOGIC; x2, x1, cout : out STD_LOGIC);
+component two_bit_adder port(cin, y2, y1, z2, z1 : in STD_LOGIC; x2, x1, cout : out STD_LOGIC);
 end component two_bit_adder;
 signal sum1 : STD_LOGIC;
 signal sum2 : STD_LOGIC;
 signal tmpc : STD_LOGIC;
 
 begin
-    adder : two_bit_adder port map(cin, a2, a1, b2, b1, sum2, sum1, tmpc);
+    adder : two_bit_adder port map(cin, y2, y1, z2, z1, sum2, sum1, tmpc);
     
-    x2 <= '0' when (sel = '0') else sum2;
-    x1 <= tmpc when (sel = '0') else sum1;
+    x2 <= '0' when (sel_a = '0') else sum2;
+    x1 <= tmpc when (sel_a = '0') else sum1;
     
 
 end Behavioral_Three;
