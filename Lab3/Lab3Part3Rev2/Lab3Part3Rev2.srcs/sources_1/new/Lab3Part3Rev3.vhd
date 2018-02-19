@@ -148,9 +148,9 @@ begin
 
     
 
-    x2 <= '0' when (sel_a = '0') else sum2;
+    x2 <= '0' when (sel_a = '1') else sum2;
 
-    x1 <= tmpc when (sel_a = '0') else sum1;
+    x1 <= tmpc when (sel_a = '1') else sum1;
 
     
 
@@ -201,7 +201,7 @@ begin
     process(sel, x1_sig, x2_sig)
         begin
         case sel is
-            when '0' => 
+            when '1' => 
                 if (x1_sig = '0') then
                     out1 <= '0';
                     out2 <= '0';
@@ -219,7 +219,7 @@ begin
                     out6 <= '1';
                     out7 <= '1';
                 end if;
-            when '1' =>
+            when '0' =>
             if (x2_sig='0'and x1_sig='0')then
             
                             out1 <= '0';
