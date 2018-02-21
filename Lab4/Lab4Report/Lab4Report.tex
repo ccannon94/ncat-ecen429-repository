@@ -46,7 +46,7 @@ We were instructed to implement a ROM module with a 4-bit input and a 3-bit outp
 
 The design we came up with for this ROM is a simple case statement what will retrieve a different value for each address. To populate our ROM for testing purposes, we decided to simply start with output "000" and iterate to "111", twice. It should be noted that the output values are trivial in this assignment. The point is to return a value stored at a given address, but the actual data stored there does not matter for this assignment. Students attempting to recreate this lab are encouraged to come up with their own values for output if they wish. The truth table for the ROM is shown in Table ~\ref{tab:romTruthTable} and the port assignments are summarized in Table ~\ref{tab:romPorts}.
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{| l | l | l | l | l |}
 	\hline
@@ -72,7 +72,7 @@ The design we came up with for this ROM is a simple case statement what will ret
 \end{center}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{| l | l | l |}
 	\hline
@@ -94,8 +94,16 @@ The design we came up with for this ROM is a simple case statement what will ret
 \subsection{Problem 2 ROM Multiplexer}
 
 \subsubsection{Background}
+This assignment builds completely on the previous assignment by feeding the output of the ROM module into a multiplexer that will output only one of the three bits. This module could be used to work with only specific bits from a given memory word.
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\begin{definition}
+Multiplexer: A multiplexer is a module that will pass only specific parts of the given input signal, based on a selector signal from the user.
+\end{definition}
 
 \subsubsection{Design Solution}
+Our approach was to use the complete entity and architecture from the previous portion of the lab as a component, and feed that information to the multiplexer. Since there are 3 outputs that can be selected, we needed to use a 2-bit input for our multiplexer. However, with 4 possible select inputs and only 3 used, we do have an invalid "sel" input, "11".
 
 \subsubsection{Results}
 
