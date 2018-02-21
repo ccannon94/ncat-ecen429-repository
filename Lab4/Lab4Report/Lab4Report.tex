@@ -33,13 +33,14 @@
 \end{titlingpage}
 
 \section{Introduction}
-The object of this lab is to introduce students to the topic of memory and show how we might represent and handle memory in VHDL. This lab also reiterated important important concepts about 
+The object of this lab is to introduce students to the topic of memory and show how we might represent and handle memory in VHDL. This lab also reiterated important important concepts about components that will be utilized in this project. By the end of this lab, we will be able to implement a basic memory module in VHDL with the ability to select specific values from the memory address.
 
 \section{Background, Design Solution, and Results}
 
 \subsection{Problem 1 ROM Implementation}
 
 \subsubsection{Background}
+We were instructed to implement a ROM module with a 4-bit input and a 3-bit output. Because there are 4-inputs, which correspond with the available addresses in this memory. 4-bits corresponds with 2\textsuperscript{4}, or 16 possible values. Therefore, we were able to derive that there are 16 addresses in this memory module. Because the output is only 3 bits, we knew that our memory word size was 3 bits, meaning that each memory address held 3 bits of data.
 
 \subsubsection{Design Solution}
 
@@ -70,7 +71,7 @@ The object of this lab is to introduce students to the topic of memory and show 
 \section{Problem 1 Constraints File}
 \begin{figure}[H]
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{./report-images/Part2/P2Const.png}
+	%\includegraphics[width=0.5\textwidth]{./report-images/Part2/P2Const.png}
 	\caption{\label{fig:Part1ConstFile}Constraints file for Problem 1.}
 \end{center}
 \end{figure}
@@ -83,7 +84,7 @@ The object of this lab is to introduce students to the topic of memory and show 
 \section{Problem 2 Constraints File}
 \begin{figure}[H]
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{./report-images/Part2/P2Const.png}
+	%\includegraphics[width=0.5\textwidth]{./report-images/Part2/P2Const.png}
 	\caption{\label{fig:Part2ConstFile}Constraints file for Problem 2.}
 \end{center}
 \end{figure}
