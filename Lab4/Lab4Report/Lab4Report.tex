@@ -44,6 +44,51 @@ We were instructed to implement a ROM module with a 4-bit input and a 3-bit outp
 
 \subsubsection{Design Solution}
 
+The design we came up with for this ROM is a simple case statement what will retrieve a different value for each address. To populate our ROM for testing purposes, we decided to simply start with output "000" and iterate to "111", twice. It should be noted that the output values are trivial in this assignment. The point is to return a value stored at a given address, but the actual data stored there does not matter for this assignment. Students attempting to recreate this lab are encouraged to come up with their own values for output if they wish. The truth table for the ROM is shown in Table ~\ref{tab:romTruthTable} and the port assignments are summarized in Table ~\ref{tab:romPorts}.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| l | l | l | l | l |}
+	\hline
+	a3 & a2 & a1 & a0 & output \\ \hline
+	0 & 0 & 0 & 0 & 000 \\ \hline
+	0 & 0 & 0 & 1 & 001 \\ \hline
+	0 & 0 & 1 & 0 & 010 \\ \hline
+	0 & 0 & 1 & 1 & 011 \\ \hline
+	0 & 1 & 0 & 0 & 100 \\ \hline
+	0 & 1 & 0 & 1 & 101 \\ \hline
+	0 & 1 & 1 & 0 & 110 \\ \hline
+	0 & 1 & 1 & 1 & 111 \\ \hline
+	1 & 0 & 0 & 0 & 000 \\ \hline
+	1 & 0 & 0 & 1 & 001 \\ \hline
+	1 & 0 & 1 & 0 & 010 \\ \hline
+	1 & 0 & 1 & 1 & 011 \\ \hline
+	1 & 1 & 0 & 0 & 100 \\ \hline
+	1 & 1 & 0 & 1 & 101 \\ \hline
+	1 & 1 & 1 & 0 & 110 \\ \hline
+	1 & 1 & 1 & 1 & 111 \\ \hline
+\end{tabular}
+\caption{\label{tab:romTruthTable}Truth table for our ROM implementation.}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	a3 & Switch 3 & W17 \\ \hline
+	a2 & Switch 2 & W16 \\ \hline
+	a1 & Switch 1 & V16 \\ \hline
+	a0 & Switch 0 & V17 \\ \hline
+	o2 & LED 2 & U19 \\ \hline
+	o1 & LED 1 & E19 \\ \hline
+	o0 & LED 0 & U16 \\ \hline
+\end{tabular}
+\caption{\label{tab:romPorts}Port assignments for ROM implementation.}
+\end{center}
+\end{table}
+
 \subsubsection{Results}
 
 \subsection{Problem 2 ROM Multiplexer}
