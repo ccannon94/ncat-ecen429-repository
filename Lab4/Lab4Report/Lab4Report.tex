@@ -110,26 +110,128 @@ The design we came up with for this ROM is a simple case statement what will ret
 \section{Problem 1 VHDL Code}
 
 \begin{lstlisting}[language=VHDL]
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
+entity rom is
+    Port ( a : in STD_LOGIC_VECTOR(3 downto 0);
+           o : out STD_LOGIC_VECTOR(2 downto 0));
+end entity rom;
+
+architecture rom_arch of rom is
+    
+begin
+process(a)
+    begin
+        case a is
+            when "0000" => o <= "000";
+            when "0001" => o <= "001";
+            when "0010" => o <= "010";
+            when "0011" => o <= "011";
+            when "0100" => o <= "100";
+            when "0101" => o <= "101";
+            when "0110" => o <= "110";
+            when "0111" => o <= "111";
+            when "1000" => o <= "000";
+            when "1001" => o <= "001";
+            when "1010" => o <= "010";
+            when "1011" => o <= "011";
+            when "1100" => o <= "100";
+            when "1101" => o <= "101";
+            when "1110" => o <= "110";
+            when "1111" => o <= "111";
+        end case;
+    end process;
+end rom_arch;
 \end{lstlisting}
 
 \section{Problem 1 Constraints File}
 \begin{figure}[H]
 \begin{center}
-	%\includegraphics[width=0.5\textwidth]{./report-images/Part2/P2Const.png}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1Const.png}
 	\caption{\label{fig:Part1ConstFile}Constraints file for Problem 1.}
 \end{center}
 \end{figure}
 
 \section{Problem 2 VHDL Code}
 \begin{lstlisting}[language=VHDL]
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
+entity rom is
+    Port ( a : in STD_LOGIC_VECTOR(3 downto 0);
+           o : out STD_LOGIC_VECTOR(2 downto 0));
+end entity rom;
+
+architecture rom_arch of rom is
+    
+begin
+process(a)
+    begin
+        case a is
+            when "0000" => o <= "000";
+            when "0001" => o <= "001";
+            when "0010" => o <= "010";
+            when "0011" => o <= "011";
+            when "0100" => o <= "100";
+            when "0101" => o <= "101";
+            when "0110" => o <= "110";
+            when "0111" => o <= "111";
+            when "1000" => o <= "000";
+            when "1001" => o <= "001";
+            when "1010" => o <= "010";
+            when "1011" => o <= "011";
+            when "1100" => o <= "100";
+            when "1101" => o <= "101";
+            when "1110" => o <= "110";
+            when "1111" => o <= "111";
+        end case;
+    end process;
+end rom_arch;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity rom_mux is
+    Port ( x : in STD_LOGIC_VECTOR(3 downto 0);
+           sel : in STD_LOGIC_VECTOR(1 downto 0);
+           z : out STD_LOGIC_VECTOR(6 downto 0));
+end rom_mux;
+
+architecture Behavioral of rom_mux is
+component rom is port(a : in STD_LOGIC_VECTOR(3 downto 0); 
+	o : out STD_LOGIC_VECTOR(2 downto 0));
+end component rom;
+
+signal val : STD_LOGIC_VECTOR(2 downto 0);
+
+begin
+    rom_com : rom port map(x, val);
+    process(sel)
+        begin
+            case sel is
+                when "00" => 
+                    if(val(0) = '1') then z <= "1001111";
+                    else z <= "0000001";
+                    end if;
+                when "01" =>
+                    if(val(1) = '1') then z <= "1001111";
+                    else z <= "0000001";
+                    end if;
+                when "10" => 
+                    if(val(2) = '1') then z <= "1001111";
+                    else z <= "0000001";
+                    end if;
+                when others => z <= "0000000";
+            end case;
+    end process;
+end Behavioral;
 \end{lstlisting}
 
 \section{Problem 2 Constraints File}
 \begin{figure}[H]
 \begin{center}
-	%\includegraphics[width=0.5\textwidth]{./report-images/Part2/P2Const.png}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2Const.png}
 	\caption{\label{fig:Part2ConstFile}Constraints file for Problem 2.}
 \end{center}
 \end{figure}
