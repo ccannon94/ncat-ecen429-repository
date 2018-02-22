@@ -386,6 +386,8 @@ In this lab, we were able to quickly and effectively implement each of the desig
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+--Declares an entity that will represent
+--read-only memory
 entity rom is
     Port ( a : in STD_LOGIC_VECTOR(3 downto 0);
            o : out STD_LOGIC_VECTOR(2 downto 0));
@@ -396,6 +398,7 @@ architecture rom_arch of rom is
 begin
 process(a)
     begin
+    		--Will return a preset value for each address "a"
         case a is
             when "0000" => o <= "000";
             when "0001" => o <= "001";
@@ -431,6 +434,8 @@ end rom_arch;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+--Declares an entity that will represent
+--read-only memory
 entity rom is
     Port ( a : in STD_LOGIC_VECTOR(3 downto 0);
            o : out STD_LOGIC_VECTOR(2 downto 0));
@@ -441,6 +446,7 @@ architecture rom_arch of rom is
 begin
 process(a)
     begin
+    		--Will return a preset value for each address "a"
         case a is
             when "0000" => o <= "000";
             when "0001" => o <= "001";
@@ -465,6 +471,8 @@ end rom_arch;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+--Declares a ROM unit whose output is read through
+--a multiplexer, one bit at a time
 entity rom_mux is
     Port ( x : in STD_LOGIC_VECTOR(3 downto 0);
            sel : in STD_LOGIC_VECTOR(1 downto 0);
@@ -472,16 +480,19 @@ entity rom_mux is
 end rom_mux;
 
 architecture Behavioral of rom_mux is
+--Declares a component of the ROM entity above
 component rom is port(a : in STD_LOGIC_VECTOR(3 downto 0); 
 	o : out STD_LOGIC_VECTOR(2 downto 0));
 end component rom;
 
+--This is the returned ROM value at the given address
 signal val : STD_LOGIC_VECTOR(2 downto 0);
 
 begin
     rom_com : rom port map(x, val);
     process(sel)
         begin
+        		--selects which bit of "val" to return
             case sel is
                 when "00" => 
                     if(val(0) = '1') then z <= "1001111";
