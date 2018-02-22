@@ -91,10 +91,61 @@ The design we came up with for this ROM is a simple case statement what will ret
 \end{table}
 
 \subsubsection{Results}
+The ROM was successfully implemented and tested on our Basys3 board. We were able to successfully demonstrate returning every value specified in our truth table. Figures ~\ref{fig:p1img1} through ~\ref{fig:p1img9} show a sample of our results for chosen inputs.
 
 \begin{figure}[H]
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{•}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3076.jpg}
+	\caption{\label{fig:p1img1}The input given by the switches is "0000" and the output shown by the LEDs is "000".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3081.jpg}
+	\caption{\label{fig:p1img2}The input given by the switches is "0100" and the output shown by the LEDs is "100".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3082.jpg}
+	\caption{\label{fig:p1img3}The input given by the switches is "0101" and the output shown by the LEDs is "101".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3083.jpg}
+	\caption{\label{fig:p1img4}The input given by the switches is "0111" and the output shown by the LEDs is "111".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3086.jpg}
+	\caption{\label{fig:p1img6}The input given by the switches is "1001" and the output shown by the LEDs is "001".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3088.jpg}
+	\caption{\label{fig:p1img7}The input given by the switches is "1011" and the output shown by the LEDs is "011".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3089.jpg}
+	\caption{\label{fig:p1img8}The input given by the switches is "1100" and the output shown by the LEDs is "100".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part1/IMG_3090.jpg}
+	\caption{\label{fig:p1img9}The input given by the switches is "1101" and the output shown by the LEDs is "101".}
 \end{center}
 \end{figure}
 
@@ -227,6 +278,98 @@ Our approach was to use the complete entity and architecture from the previous p
 \end{table}
 
 \subsubsection{Results}
+For our ROM and multiplexer circuit to operate as intended, we did have to rotate the output bits for '1' to the right by 1. A misread of the 7-segment diagram led to an initial output of "0011111" for the seven segment display, which was incorrect. However, once that adjustment was made our circuit functioned exactly as expected. A set of the results are displayed in figures ~\ref{fig:p1img1} through ~\ref{fig:p2img13}.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3095.jpg}
+	\caption{\label{fig:p2img1}The input given by the switches is "0000", select is "00", therefore the output shown by the 7-segment display is "0".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3096.jpg}
+	\caption{\label{fig:p2img2}The input given by the switches is "0000", select is "01", therefore the output shown by the 7-segment display is "0".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3097.jpg}
+	\caption{\label{fig:p2img3}The input given by the switches is "0000", select is "10", therefore the output shown by the 7-segment display is "0".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3098.jpg}
+	\caption{\label{fig:p2img4}The input given by the switches is "0001", select is "00", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3099.jpg}
+	\caption{\label{fig:p2img5}The input given by the switches is "0001", select is "01", therefore the output shown by the 7-segment display is "0".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3100.jpg}
+	\caption{\label{fig:p2img6}The input given by the switches is "0001", select is "10", therefore the output shown by the 7-segment display is "0".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3101.jpg}
+	\caption{\label{fig:p2img7}The input given by the switches is "0101", select is "00", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3102.jpg}
+	\caption{\label{fig:p2img8}The input given by the switches is "0101", select is "01", therefore the output shown by the 7-segment display is "0".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3105.jpg}
+	\caption{\label{fig:p2img9}The input given by the switches is "0110", select is "01", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3108.jpg}
+	\caption{\label{fig:p2img10}The input given by the switches is "0111", select is "00", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3112.jpg}
+	\caption{\label{fig:p2img11}The input given by the switches is "1011", select is "01", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3114.jpg}
+	\caption{\label{fig:p2img12}The input given by the switches is "1101", select is "00", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{../report-images/Part2/IMG_3116.jpg}
+	\caption{\label{fig:p2img13}The input given by the switches is "1101", select is "10", therefore the output shown by the 7-segment display is "1".}
+\end{center}
+\end{figure}
 
 \section{Conclusion}
 In this lab, we were able to quickly and effectively implement each of the design challenges. As a result, we now have a firmer understanding of VHDL systems and components, as well as a new conceptual understanding of read-only memory than we previously had. The most difficult technical challenge in this lab was the design decisions around the use of the 7-segment display. Eventually, I think the design and the error case that we set up for the 7-segment display is highly functional and intuitive to the user.
