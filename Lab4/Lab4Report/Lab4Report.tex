@@ -8,6 +8,7 @@
 \usepackage{appendix}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{multirow}
 \usepackage{amsthm}
 % The next three lines make the table and figure numbers also include section number
 \usepackage{chngcntr}
@@ -103,7 +104,121 @@ Multiplexer: A multiplexer is a module that will pass only specific parts of the
 \end{definition}
 
 \subsubsection{Design Solution}
-Our approach was to use the complete entity and architecture from the previous portion of the lab as a component, and feed that information to the multiplexer. Since there are 3 outputs that can be selected, we needed to use a 2-bit input for our multiplexer. However, with 4 possible select inputs and only 3 used, we do have an invalid "sel" input, "11".
+Our approach was to use the complete entity and architecture from the previous portion of the lab as a component, and feed that information to the multiplexer. Since there are 3 outputs that can be selected, we needed to use a 2-bit input for our multiplexer. However, with 4 possible select inputs and only 3 used, we do have an invalid "sel" input, "11". For this input, we decided to turn on all lights on the 7-segment display, showing an "8". Because 8 is obviously not a value that can be represented by one bit, this shows a clear error state to the user. Valid selections will display the value of the chosen bit, '1' or '0', on the 7-segment display. For reference, a key to 7-segment displays is shown in Figure ~\ref{fig:sevenSeg}. The truth table for this system is shown in Table ~\ref{tab:romMuxTruthTable}. Instead of describing every output to the 7-segment display, Tables ~\ref{tab:romMuxTruthTable1} and ~\ref{tab:romMuxTruthTable2} show the output as 1 or 0. Table ~\ref{tab:sevenSegTruthTable} describes how these outputs are handled with respect to the 7-segments display. Finally, Table ~\ref{tab:romMuxPorts} describes the port assignments for our design.
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.2\textwidth]{../../Lab2/report-images/img1.png}
+	\caption{\label{fig:sevenSeg}Seven segment display diagram.}
+\end{center}
+\end{figure}
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l | l | l | l |}
+	\hline
+	x & sel & z \\ \hline
+	\multirow{3}{*}{0000} & 00 & 0 \\
+	& 01 & 0 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{0001} & 00 & 1 \\
+	& 01 & 0 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{0010} & 00 & 0 \\
+	& 01 & 1 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{0011} & 00 & 1 \\
+	& 01 & 1 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{0100} & 00 & 0 \\
+	& 01 & 0 \\
+	& 10 & 1 \\ \hline
+	\multirow{3}{*}{0101} & 00 & 1 \\
+	& 01 & 0 \\
+	& 10 & 1 \\ \hline
+	\multirow{3}{*}{0110} & 00 & 0 \\
+	& 01 & 1 \\
+	& 10 & 1 \\ \hline
+	\multirow{3}{*}{0111} & 00 & 1 \\
+	& 01 & 1 \\
+	& 10 & 1 \\ \hline
+
+\end{tabular}
+\caption{\label{tab:romMuxTruthTable1}Truth Table for addresses 0000 through 0111.}
+\end{center}
+\end{table}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l | l | l | l |}
+	\hline
+	x & sel & z \\ \hline
+	\multirow{3}{*}{1000} & 00 & 0 \\
+	& 01 & 0 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{1001} & 00 & 1 \\
+	& 01 & 0 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{1010} & 00 & 0 \\
+	& 01 & 1 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{1011} & 00 & 1 \\
+	& 01 & 1 \\
+	& 10 & 0 \\ \hline
+	\multirow{3}{*}{1100} & 00 & 0 \\
+	& 01 & 0 \\
+	& 10 & 1 \\ \hline
+	\multirow{3}{*}{1101} & 00 & 1 \\
+	& 01 & 0 \\
+	& 10 & 1 \\ \hline
+	\multirow{3}{*}{1110} & 00 & 0 \\
+	& 01 & 1 \\
+	& 10 & 1 \\ \hline
+	\multirow{3}{*}{1111} & 00 & 1 \\
+	& 01 & 1 \\
+	& 10 & 1 \\ \hline
+\end{tabular}
+\caption{\label{tab:romMuxTruthTable2}Truth table for addresses 1000 through 1111.}
+\end{center}
+\end{table}
+\end{minipage}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l | l | l | l | l | l |}
+	\hline
+	Output Bit & z0 & z1 & z2 & z3 & z4 & z5 & z6 \\ \hline
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+	1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\ \hline 
+\end{tabular}
+\caption{\label{tab:sevenSegTruthTable}Truth table for seven segment displayed based on the output.}
+\end{center}
+\end{table}
+
+\begin{table}{H}
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	x3 & Switch 3 & W17 \\ \hline
+	x2 & Switch 2 & W16 \\ \hline
+	x1 & Switch 1 & V16 \\ \hline
+	x0 & Switch 0 & V17 \\ \hline
+	z0 & CA & W7 \\ \hline
+	z1 & CB & W6 \\ \hline
+	z2 & CC & U8 \\ \hline
+	z3 & CD & V8 \\ \hline
+	z4 & CE & U5 \\ \hline
+	z5 & CF & V5 \\ \hline
+	z6 & CG & U7 \\ \hline
+\end{tabular}
+\caption{\label{tab:romMuxPorts}Port assignments for ROM and multiplexer design.}
+\end{center}
+\end{table}
 
 \subsubsection{Results}
 
