@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\graphicspath{report_images/}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{amsthm}
+% The next three lines make the table and figure numbers also include section number
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+% Needed to make titling page without a page number
+\usepackage{titling}
+
+% DOCUMENT INFORMATION =================================================
+\font\titleFont=cmr12 at 11pt
+\title {{\titleFont ECEN 429: Introduction to Digital Systems Design Laboratory \\ North Carolina Agricultural and Technical State University \\ Department of Electrical and Computer Engineering}} % Declare Title
+\author{\titleFont Reporter: Chris Cannon} % Declare authors
+\date{\titleFont March 1, 2018}
+% ======================================================================
+
+\begin{document}
+
+\begin{titlingpage}
+\maketitle
+\begin{center}
+	Prelab 6
+\end{center}
+\end{titlingpage}
+
+\section{Introduction}
+The purpose of this prelab is to refresh the concepts of state machines and learn to apply them on the boards. State machines are incredibly important tools in electrical and programming design. Therefore, after mastering this skill we will be able to use a new tool in our circuit designs.
+
+\section{Background, Design Solution, Results}
+\subsection{Problem A}
+How many states does the Mealy machine above have?
+Two states.
+
+\subsection{Problem B}
+How many process blocks will you need to code this machine? (Look at the example in the first page.)
+Two, one for the clock and one for the state.
+
+\subsection{Problem C}
+Using the VHDL from page 1 as a guide, write the VHDL Code for the Mealy machine above.
+
+\begin{lstlisting}[language=VHDL]
+
+entity FSM is 
+port (CLOCK, RESET, INPUT : IN STD_LOGIC; OUTPUT : OUT STD_LOGIC); 
+end entity FSM; 
+architecture beh of FSM is 
+signal CURRENT_STATE : STD_LOGIC :- 0;
+begin 
+	process(CLOCK, RESET)
+end architecture beh;	
+
+\end{lstlisting}
+
+\section{Conclusion}
+This lab will introduce a significantly more advanced technical topic as we implement our own state machine. Multiple synchronous processes will be difficult to conceptualize but should make for some impressive circuits.
+
+\end{document}
