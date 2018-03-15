@@ -26,9 +26,9 @@ signal current_state : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 begin
     
     clock : Clockdivider port map(clk, enable, slowClock, mediumClock, fastClock, led0);
-    process(clk, enable)
+    process(slowClock, enable)
     begin
-        if(clk'event and (clk = '1') and (enable = '1')) then
+        if(slowClock'event and (slowClock = '1') and (enable = '1')) then
             if(current_state = "1001") then
                 current_state <= "0000";
             else
@@ -40,7 +40,20 @@ begin
                 output <= "1111111";
             end if;
         end if;
-    end process;    
+            case current_state is
+            when "0000" => output <= "0000000001";
+            when "0001" => output <= "0000000010";
+            when "0010" => output <= "0000000100";
+            when "0011" => output <= "0000001000";
+            when "0100" => output <= "0000010000";
+            when "0101" => output <= "0000100000";
+            when "0110" => output <= "0001000000";
+            when "0111" => output <= "0010000000";
+            when "1000" => output <= "0100000000";
+            when "1001" => output <= "1000000000";
+         end case    
+    end process;
+
             
 
 end moore_arch;

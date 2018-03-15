@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1519933526">
-  <File Type="PA-TCL" Name="moore_machine.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="moore_machine_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="moore_machine_reports.tcl"/>
-  <File Type="RDS-RDS" Name="moore_machine.vds"/>
-  <File Type="RDS-UTIL" Name="moore_machine_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="moore_machine_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="moore_machine.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="moore_machine_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="moore_machine_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1521133287">
+  <File Type="PA-TCL" Name="Clockdivider.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Clockdivider_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Clockdivider_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Clockdivider.vds"/>
+  <File Type="RDS-UTIL" Name="Clockdivider_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Clockdivider_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Clockdivider.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Clockdivider_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Clockdivider_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/clockdivider.vhd">
@@ -21,13 +21,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/moore_machine.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="moore_machine"/>
+      <Option Name="TopModule" Val="Clockdivider"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -45,9 +46,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

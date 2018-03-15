@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log moore_machine.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source moore_machine.tcl -notrace
+EAStep vivado -log Clockdivider.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Clockdivider.tcl -notrace
 
 

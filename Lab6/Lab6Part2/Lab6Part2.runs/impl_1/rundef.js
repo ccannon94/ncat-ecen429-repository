@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
-         "-log moore_machine.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source moore_machine.tcl -notrace" );
+         "-log Clockdivider.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Clockdivider.tcl -notrace" );
 
 
 
