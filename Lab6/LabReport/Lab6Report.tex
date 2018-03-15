@@ -132,12 +132,41 @@ The state machine successfully progressed through the states and output '1' in s
 Problem 3 will use the clock divider to test a Mealy State Machine acting as a sequence detector. A Mealy State Machine provides output depending on its current state and its input. This generally lowers the amount of states required to implement a state machine. This state machine should output '1' or HIGH when either "101" or "010" is detected by the input.
 
 \subsubsection{Design Solution}
+We implemented this Mealy State Machine without overlap to detect the sequences "101" or "010". Basically, without overlap means that after detecting a sequence, the state machine returns to the original state and starts over. Therefore, if the input was "01010", the first "010" would be detected, but "10" would not trigger an output becuase the sequence has started over. The state diagram is shown in Figure ~\ref{fig:mealy_machine}. Port assignments for this design are shown in ~\ref{tab:mealy_state_ports}.
 
+\begin{center}
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/img2.jpg}
+	\caption{\label{fig:mealy_machine}Mealy State Diagram for sequence detector.}
+\end{figure}
+\end{center}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	clk & Clock & W5 \\ \hline
+	enable & Switch 0 & V17 \\ \hline
+	input & Switch 1 & U18 \\ \hline
+	led0 & LED 15 & L1 \\ \hline
+	output0 & Segment A & W7 \\ \hline
+	output1 & Segment B & W6 \\ \hline
+	output2 & Segment C & U8 \\ \hline
+	output3 & Segment D & V8 \\ \hline
+	output4 & Segment E & U5 \\ \hline
+	output5 & Segment F & V5 \\ \hline
+	output6 & Segment G & U7 \\ \hline
+\end{tabular}
+\caption{\label{tab:mealy_state_ports}Port assignments for the Mealy State Machine.}
+\end{center}
+\end{table}
 
 \subsubsection{Results}
 The Mealy State Machine was able to successfully output '1' when "101" or "010" is detected.
 
 \section{Conclusion}
+In conclusion, by completing this lab we learned the implementation details of Mealy and Moore state machines in VHDL. This will be important for many tasks in digital system design. The most significant challenge for this lab was designing the Mealy State Machine for two potential sequences, but by carefully diagramming them together we were able to complete a design. State machines are essential building blocks of digital circuits, and now that we have completed them we can move on to even more advanced design.
 
 \pagebreak
 

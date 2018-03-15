@@ -1,0 +1,250 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 9976
+License: Customer
+
+Current time: 	Thu Mar 15 12:24:23 EDT 2018
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 244 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Chris
+User home directory: C:/Users/Chris
+User working directory: C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2/vivado.log
+Vivado journal file location: 	C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2/vivado.jou
+Engine tmp dir: 	C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2/.Xil/Vivado-9976-c3-windows10
+
+GUI allocated memory:	179 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 489 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 37 MB (+36774kb) [00:00:12]
+// [Engine Memory]: 488 MB (+359823kb) [00:00:12]
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Chris\Documents\development\ncat-ecen429-repository\Lab6\Lab6Part2\Lab6Part2.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 65 MB (+26543kb) [00:00:17]
+// [Engine Memory]: 520 MB (+7864kb) [00:00:18]
+// [Engine Memory]: 561 MB (+16653kb) [00:00:21]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 565 MB. GUI used memory: 39 MB. Current time: 3/15/18 12:24:33 PM EDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 744.500 ; gain = 42.582 
+// Project name: Lab6Part2; location: C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a (cj): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+dismissDialog("Critical Messages"); // a (cj)
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (moore_machine.vhd) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, moore_machine(moore_arch) (moore_machine.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, moore_machine(moore_arch) (moore_machine.vhd)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, moore_machine(moore_arch) (moore_machine.vhd)]", 1); // B (D, cj)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 68 MB (+148kb) [00:00:55]
+// Elapsed time: 30 seconds
+selectCodeEditor("moore_machine.vhd", 115, 243); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 125, 218); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 113, 237); // cd (w, cj)
+// [GUI Memory]: 72 MB (+1080kb) [00:01:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 592 MB. GUI used memory: 40 MB. Current time: 3/15/18 12:25:35 PM EDT
+// Elapsed time: 19 seconds
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // B (E, cj)
+// [Engine Memory]: 592 MB (+2312kb) [00:01:27]
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+// Elapsed time: 42 seconds
+selectCodeEditor("moore_machine.vhd", 140, 188); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 76, 224); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 44, 170); // cd (w, cj)
+// [GUI Memory]: 78 MB (+1448kb) [00:02:53]
+// Elapsed time: 53 seconds
+selectCodeEditor("moore_machine.vhd", 181, 152); // cd (w, cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("moore_machine.vhd", 219, 182); // cd (w, cj)
+// [GUI Memory]: 82 MB (+297kb) [00:03:55]
+// Elapsed time: 46 seconds
+selectCodeEditor("moore_machine.vhd", 109, 193); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("moore_machine.vhd", 77, 196); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 77, 196, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("moore_machine.vhd", 270, 164); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 56, 195); // cd (w, cj)
+typeControlKey((HResource) null, "moore_machine.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 33, 157); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 0, 195); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 560, 240); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 209, 232); // cd (w, cj)
+// Elapsed time: 27 seconds
+selectCodeEditor("moore_machine.vhd", 154, 274); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 162, 263); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("moore_machine.vhd", 252, 256); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 151, 265); // cd (w, cj)
+// [GUI Memory]: 87 MB (+1227kb) [00:05:52]
+selectCodeEditor("moore_machine.vhd", 104, 262); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 296, 260); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 298, 260); // cd (w, cj)
+// Elapsed time: 58 seconds
+selectCodeEditor("moore_machine.vhd", 144, 265); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 67, 176); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 67, 176, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("moore_machine.vhd", 312, 173); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 8, 138); // cd (w, cj)
+typeControlKey((HResource) null, "moore_machine.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 8, 145); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 8, 145, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("moore_machine.vhd", 253, 148); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 233, 143); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 343, 283); // cd (w, cj)
+// Elapsed time: 111 seconds
+selectCodeEditor("moore_machine.vhd", 87, 159); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 295, 278); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 145, 161); // cd (w, cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("moore_machine.vhd", 81, 212); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 372, 214); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 176, 264); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("moore_machine.vhd", 234, 60); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 234, 59); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 270, 144); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 405, 143); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 242, 145); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 279, 146); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 419, 145); // cd (w, cj)
+// [GUI Memory]: 93 MB (+1397kb) [00:10:49]
+// Elapsed time: 56 seconds
+selectCodeEditor("moore_machine.vhd", 246, 75); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("moore_machine.vhd", 156, 139); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 229, 156); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 355, 130); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 193, 218); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 217, 207); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 240, 230); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 241, 230); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 329, 161); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 206, 131); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 208, 127); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 232, 163); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("moore_machine.vhd", 347, 162); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 360, 164); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 320, 147); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 311, 163); // cd (w, cj)
+// Elapsed time: 37 seconds
+selectCodeEditor("moore_machine.vhd", 370, 162); // cd (w, cj)
+typeControlKey((HResource) null, "moore_machine.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 440, 164); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 440, 164, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("moore_machine.vhd", 389, 188); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 237, 196); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 438, 193); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 81, 265); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 99, 223); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 107, 207); // cd (w, cj)
+selectCodeEditor("moore_machine.vhd", 88, 206); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("moore_machine.vhd", 207, 78); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 632 MB (+11050kb) [00:13:58]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("moore_machine.vhd", 138, 273); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("moore_machine.vhd", 13, 4, false, false, false, true, false); // cd (w, cj) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 632 MB. GUI used memory: 42 MB. Current time: 3/15/18 12:38:11 PM EDT
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // ac (ai, Popup.HeavyWeightWindow)
+// Elapsed time: 18 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open Project..."); // ac (cj, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part3/Lab6Part3.xpr");
+// Opening Vivado Project: C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part3/Lab6Part3.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_No", "No"); // JButton (A, G)
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part3/Lab6Part3.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part3' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Project name: Lab6Part3; location: C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part3; part: xc7a35tcpg236-1
+// 'i' command handler elapsed time: 9 seconds
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// a (cj): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cj)
+// [GUI Memory]: 102 MB (+4964kb) [00:14:43]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false, false, false, false, false, true); // B (D, cj) - Double Click
