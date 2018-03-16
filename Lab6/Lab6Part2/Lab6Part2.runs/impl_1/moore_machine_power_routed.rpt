@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri Mar 16 11:37:59 2018
+| Date             : Fri Mar 16 11:58:15 2018
 | Host             : DESKTOP-C4F8K0T running 64-bit major release  (build 9200)
 | Command          : report_power -file moore_machine_power_routed.rpt -pb moore_machine_power_summary_routed.pb -rpx moore_machine_power_routed.rpx
 | Design           : moore_machine
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 13.572 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 16.874 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 13.358                           |
-| Device Static (W)        | 0.213                            |
+| Dynamic (W)              | 16.549                           |
+| Device Static (W)        | 0.325                            |
 | Effective TJA (C/W)      | 5.0                              |
-| Max Ambient (C)          | 17.2                             |
-| Junction Temperature (C) | 92.8                             |
+| Max Ambient (C)          | 0.6                              |
+| Junction Temperature (C) | 109.4                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.215 |       61 |       --- |             --- |
-|   LUT as Logic |     0.173 |       10 |     20800 |            0.05 |
+| Slice Logic    |     0.233 |       62 |       --- |             --- |
+|   LUT as Logic |     0.191 |       10 |     20800 |            0.05 |
 |   Register     |     0.018 |       33 |     41600 |            0.08 |
 |   CARRY4       |     0.017 |        7 |      8150 |            0.09 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        3 |       --- |             --- |
-| Signals        |     0.273 |       56 |       --- |             --- |
-| I/O            |    12.871 |       21 |       106 |           19.81 |
-| Static Power   |     0.213 |          |           |                 |
-| Total          |    13.572 |          |           |                 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |     0.282 |       57 |       --- |             --- |
+| I/O            |    16.034 |       21 |       106 |           19.81 |
+| Static Power   |     0.325 |          |           |                 |
+| Total          |    16.874 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.615 |       0.491 |      0.124 |
-| Vccaux    |       1.800 |     0.497 |       0.472 |      0.026 |
-| Vcco33    |       3.300 |     3.643 |       3.642 |      0.001 |
+| Vccint    |       1.000 |     0.732 |       0.519 |      0.213 |
+| Vccaux    |       1.800 |     0.625 |       0.587 |      0.037 |
+| Vcco33    |       3.300 |     4.538 |       4.537 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.003 |       0.000 |      0.003 |
+| Vccbram   |       1.000 |     0.006 |       0.000 |      0.006 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,8 +138,8 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| moore_machine |    13.358 |
-|   clock       |     0.145 |
+| moore_machine |    16.549 |
+|   clock       |     0.143 |
 +---------------+-----------+
 
 

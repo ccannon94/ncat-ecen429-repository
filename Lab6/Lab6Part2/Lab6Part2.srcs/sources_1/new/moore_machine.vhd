@@ -38,7 +38,6 @@ begin
                 else
                     current_state <= std_logic_vector( unsigned(current_state) + 1 );
                 end if;
-                
             else current_state <= "0000";
             end if;
         end if;
@@ -48,7 +47,7 @@ begin
         if((current_state = "0100") or (current_state = "1000")) then
             output <= "1001111";
         else
-            output <= "1111111";
+            output <= "1000000";
         end if;
         case current_state is
             when "0000" => state <= "0000000001";

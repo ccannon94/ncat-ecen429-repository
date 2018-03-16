@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Mar 16 11:36:34 2018
-# Process ID: 11436
+# Start of session at: Fri Mar 16 11:56:50 2018
+# Process ID: 10812
 # Current directory: C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.runs/synth_1
 # Command line: vivado.exe -log moore_machine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source moore_machine.tcl
 # Log file: C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.runs/synth_1/moore_machine.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12304 
+INFO: Helper process launched with PID 6368 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 351.340 ; gain = 100.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 351.535 ; gain = 100.625
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'moore_machine' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:16]
 INFO: [Synth 8-3491] module 'Clockdivider' declared at 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:26' bound to instance 'clock' of component 'Clockdivider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:29]
@@ -25,12 +25,12 @@ INFO: [Synth 8-638] synthesizing module 'Clockdivider' [C:/Users/student/Desktop
 INFO: [Synth 8-4471] merging register 'slowClock_sig_reg' into 'SlowClock_reg' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:51]
 WARNING: [Synth 8-6014] Unused sequential element slowClock_sig_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:51]
 INFO: [Synth 8-256] done synthesizing module 'Clockdivider' (1#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:32]
-WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:30]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:34]
 INFO: [Synth 8-256] done synthesizing module 'moore_machine' (2#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:16]
 WARNING: [Synth 8-3331] design moore_machine has unconnected port input
 WARNING: [Synth 8-3331] design moore_machine has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 403.863 ; gain = 153.094
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 403.863 ; gain = 152.953
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -40,7 +40,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 403.863 ; gain = 153.094
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 403.863 ; gain = 152.953
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -56,25 +56,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 728.445 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 729.270 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -94,7 +94,6 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -110,7 +109,6 @@ Detailed RTL Component Info :
 +---Registers : 
 	                4 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 Module Clockdivider 
 Detailed RTL Component Info : 
@@ -137,14 +135,12 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-6014] Unused sequential element clock/FastClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element clock/MediumClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:49]
 WARNING: [Synth 8-3917] design moore_machine has port output[6] driven by constant 1
-WARNING: [Synth 8-3917] design moore_machine has port output[3] driven by constant 1
-WARNING: [Synth 8-3917] design moore_machine has port output[2] driven by constant 1
-WARNING: [Synth 8-3917] design moore_machine has port output[1] driven by constant 1
-WARNING: [Synth 8-3917] design moore_machine has port output[0] driven by constant 1
+WARNING: [Synth 8-3917] design moore_machine has port output[5] driven by constant 0
+WARNING: [Synth 8-3917] design moore_machine has port output[4] driven by constant 0
 WARNING: [Synth 8-3331] design moore_machine has unconnected port input
 WARNING: [Synth 8-3331] design moore_machine has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -156,13 +152,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 728.445 ; gain = 477.676
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 729.270 ; gain = 478.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,7 +170,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,7 +194,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,7 +207,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,25 +219,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -275,11 +271,11 @@ Report Instance Areas:
 |2     |  clock  |Clockdivider |    37|
 +------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 743.754 ; gain = 168.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 742.516 ; gain = 166.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 742.516 ; gain = 491.605
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -289,10 +285,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 743.754 ; gain = 505.367
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 742.516 ; gain = 503.664
 INFO: [Common 17-1381] The checkpoint 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.runs/synth_1/moore_machine.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file moore_machine_utilization_synth.rpt -pb moore_machine_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 743.754 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 16 11:37:04 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 742.516 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 16 11:57:21 2018...

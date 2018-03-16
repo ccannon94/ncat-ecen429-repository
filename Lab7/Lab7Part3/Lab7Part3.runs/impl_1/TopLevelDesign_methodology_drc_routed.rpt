@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Mar 15 15:03:09 2018
+| Date         : Fri Mar 16 12:22:25 2018
 | Host         : DESKTOP-C4F8K0T running 64-bit major release  (build 9200)
 | Command      : report_methodology -file TopLevelDesign_methodology_drc_routed.rpt -pb TopLevelDesign_methodology_drc_routed.pb -rpx TopLevelDesign_methodology_drc_routed.rpx
 | Design       : TopLevelDesign
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 31
+             Violations found: 32
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
-| TIMING-17 | Warning  | Non-clocked sequential cell | 31         |
+| TIMING-17 | Warning  | Non-clocked sequential cell | 32         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -134,55 +134,60 @@ Related violations: <none>
 
 TIMING-17#21 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[2]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[3]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[4]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[5]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[6]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[7]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[8]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/cnt_reg[9]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/clockDiv/led0_reg/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/cnt_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Warning
 Non-clocked sequential cell  
-The clock pin stateMachine/current_state_reg[0]/C is not reached by a timing clock
+The clock pin stateMachine/clockDiv/led0_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Warning
+Non-clocked sequential cell  
+The clock pin stateMachine/current_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Warning
 Non-clocked sequential cell  
 The clock pin stateMachine/current_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>

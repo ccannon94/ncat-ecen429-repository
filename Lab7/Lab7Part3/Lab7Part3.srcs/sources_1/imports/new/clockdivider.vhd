@@ -35,20 +35,20 @@ signal slowClock_sig : STD_LOGIC;
 
 begin
     process  
-    variable cnt :	std_logic_vector(26 downto 0):= "000000000000000000000000000";
+    variable cnt :	std_logic_vector(27 downto 0):= "0000000000000000000000000000";
     begin					 
         wait until ((clk'EVENT) AND (clk = '1'));
 	       
 		if (start_timer = '1') then
-	       cnt := "000000000000000000000000000";
+	       cnt := "0000000000000000000000000000";
 	    else  
            cnt := STD_LOGIC_VECTOR(unsigned(cnt) + 1);
 	    end if;
 
    	    FastClock <= cnt(22);
    	    MediumClock <= cnt(24);	
-   	    SlowClock <= cnt(26);
-        slowClock_sig <= cnt(26);
+   	    SlowClock <= cnt(27);
+        slowClock_sig <= cnt(27);
 	
         if (slowClock_sig = '1') then
 		  led0 <= '1';
