@@ -40,3 +40,10 @@ set_property PACKAGE_PIN V8 [get_ports {output[3]}]
 set_property PACKAGE_PIN U5 [get_ports {output[4]}]
 set_property PACKAGE_PIN V5 [get_ports {output[5]}]
 set_property PACKAGE_PIN U7 [get_ports {output[6]}]
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports timer_restart]
+set_property PACKAGE_PIN T17 [get_ports timer_restart]
+
+set_property PACKAGE_PIN W19 [get_ports reset]
+set_property IOSTANDARD LVCMOS33 [get_ports reset]

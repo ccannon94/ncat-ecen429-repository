@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log Clockdivider.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Clockdivider.tcl
+    with args -log moore_machine.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source moore_machine.tcl
 
 
 ****** Vivado v2017.4 (64-bit)
@@ -8,22 +8,28 @@
   **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source Clockdivider.tcl -notrace
-Command: synth_design -top Clockdivider -part xc7a35tcpg236-1
+source moore_machine.tcl -notrace
+Command: synth_design -top moore_machine -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3952 
+INFO: Helper process launched with PID 12304 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 351.809 ; gain = 101.148
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 351.340 ; gain = 100.570
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'moore_machine' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:16]
+INFO: [Synth 8-3491] module 'Clockdivider' declared at 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:26' bound to instance 'clock' of component 'Clockdivider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:29]
 INFO: [Synth 8-638] synthesizing module 'Clockdivider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:32]
 INFO: [Synth 8-4471] merging register 'slowClock_sig_reg' into 'SlowClock_reg' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:51]
 WARNING: [Synth 8-6014] Unused sequential element slowClock_sig_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:51]
 INFO: [Synth 8-256] done synthesizing module 'Clockdivider' (1#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:32]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'moore_machine' (2#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/new/moore_machine.vhd:16]
+WARNING: [Synth 8-3331] design moore_machine has unconnected port input
+WARNING: [Synth 8-3331] design moore_machine has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 404.063 ; gain = 153.402
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 403.863 ; gain = 153.094
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -33,7 +39,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 404.063 ; gain = 153.402
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 403.863 ; gain = 153.094
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -41,147 +47,33 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc]
-WARNING: [Vivado 12-584] No ports matched 'enable'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:2]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'input'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[0]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:5]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[1]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:6]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[2]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[3]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:8]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[4]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:9]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[5]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[6]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[7]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[8]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[9]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[6]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[5]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[4]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[3]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[2]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[1]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[0]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[9]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[8]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[7]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[6]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[5]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[4]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[3]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[2]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[1]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'state[0]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'enable'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'input'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[0]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[1]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[2]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[3]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[4]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[5]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'output[6]'. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Clockdivider_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Clockdivider_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/moore_machine_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/moore_machine_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 704.242 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 728.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 704.242 ; gain = 453.582
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 704.242 ; gain = 453.582
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 704.242 ; gain = 453.582
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 704.242 ; gain = 453.582
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -195,9 +87,14 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     27 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
 	               27 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -205,6 +102,15 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module moore_machine 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 Module Clockdivider 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -227,8 +133,17 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element clock/FastClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:48]
+WARNING: [Synth 8-6014] Unused sequential element clock/MediumClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.srcs/sources_1/imports/new/clockdivider.vhd:49]
+WARNING: [Synth 8-3917] design moore_machine has port output[6] driven by constant 1
+WARNING: [Synth 8-3917] design moore_machine has port output[3] driven by constant 1
+WARNING: [Synth 8-3917] design moore_machine has port output[2] driven by constant 1
+WARNING: [Synth 8-3917] design moore_machine has port output[1] driven by constant 1
+WARNING: [Synth 8-3917] design moore_machine has port output[0] driven by constant 1
+WARNING: [Synth 8-3331] design moore_machine has unconnected port input
+WARNING: [Synth 8-3331] design moore_machine has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 704.242 ; gain = 453.582
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -240,13 +155,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 721.734 ; gain = 471.074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 721.809 ; gain = 471.148
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 728.445 ; gain = 477.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -258,7 +173,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -282,7 +197,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -295,7 +210,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -307,25 +222,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -343,26 +258,29 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     7|
-|3     |LUT1   |     1|
-|4     |FDRE   |    31|
-|5     |IBUF   |     2|
-|6     |OBUF   |     4|
+|3     |LUT1   |     3|
+|4     |LUT3   |     1|
+|5     |LUT4   |    13|
+|6     |FDRE   |    33|
+|7     |IBUF   |     3|
+|8     |OBUF   |    18|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    46|
-+------+---------+-------+------+
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |    79|
+|2     |  clock  |Clockdivider |    37|
++------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 740.875 ; gain = 190.035
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 740.875 ; gain = 490.215
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 743.754 ; gain = 168.402
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 743.754 ; gain = 492.984
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -370,10 +288,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-15 Infos, 39 Warnings, 38 Critical Warnings and 0 Errors encountered.
+18 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 740.918 ; gain = 502.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.runs/synth_1/Clockdivider.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file Clockdivider_utilization_synth.rpt -pb Clockdivider_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 740.918 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 15 13:02:01 2018...
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 743.754 ; gain = 505.367
+INFO: [Common 17-1381] The checkpoint 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.runs/synth_1/moore_machine.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file moore_machine_utilization_synth.rpt -pb moore_machine_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 743.754 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 16 11:37:04 2018...
