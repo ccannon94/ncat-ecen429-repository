@@ -85,7 +85,28 @@ In order to reduce the clock speed from 100 MHz, or 100,000,000 Hz, to approxima
 \end{table}
 
 \subsubsection{Results}
-The clock divider successfully slowed the clock signal from 100 MHz to 1 Hz, or 1 iteration per second.
+The clock divider successfully slowed the clock signal from 100 MHz to 1 Hz, or 1 iteration per second. The functioning clock is shown in Figures ~\ref{fig:part1img1} through ~\ref{fig:part1img3}.
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part1/IMG_0574.jpg}
+	\caption{\label{fig:part1img1}This image shows the clock that is currently not started. Switch 0 is off and therefore the lights are not flashing.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part1/IMG_0575.jpg}
+	\caption{\label{fig:part1img2}In this figure all three clock speeds are on. The LED on the left is an LED that coordinates with the SlowClock signal, and will be used in the state machines to help the user visualize the clock. }
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part1/IMG_0577.jpg}
+	\caption{\label{fig:part1img3}This image shows the differences between the 3 signals. Fast clock is LED 0 on the far right, it is fully on. MediumClock is LED 1 which is rising, and appears half-bright. SlowClock is represented by LED 2 and is off.}
+\end{figure}
+\end{center}
 
 \subsection{Problem 2 }
 
@@ -96,7 +117,7 @@ For Problem 2, we had to utilize our clock divider implemented in Problem 1 as w
 For our design, we had to implement a 10-state Moore Machine that would output '1' or HIGH at 2 states of our choice. For the purposed of this experiment, we selected state 4 and state 8. The state diagram is shown in Figure ~\ref{fig:moore_state_diagram}. Basically, this machine should progress through the states every clock cycle as long as the enable bit is '1' or HIGH. When it reaches state 9, it should return to state 0. The ports for this design are summarized in Tables ~\ref{tab:moore_input_ports} and ~\ref{tab:moore_output_ports}.
 
 \begin{center}
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=\textwidth]{images/img1.jpg}
 	\caption{\label{fig:moore_state_diagram}Moore State Diagram showing output at states 4 and 8.}
 \end{figure}
@@ -143,7 +164,42 @@ For our design, we had to implement a 10-state Moore Machine that would output '
 \end{table}
 
 \subsubsection{Results}
-The state machine successfully progressed through the states and output '1' in states 4 and 8.
+The state machine successfully progressed through the states and output '1' in states 4 and 8. Some example outputs of the Moore State Machine are shown in Figures ~\ref{fig:part2img1} through ~\ref{fig:part2img5}.
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part2/IMG_0578.jpg}
+	\caption{\label{fig:part2img1}This image shows the state machine with a '0' input. Therefor, it will remain in State 0 with an output of 0 because Switch 0 is off.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part2/IMG_0579.jpg}
+	\caption{\label{fig:part2img2}This image shows the state machine with an input of '1' that has progressed to State 2. In accordance with the state diagram, the output is 0.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part2/IMG_0580.jpg}
+	\caption{\label{fig:part2img3}This image shows the state machine with a '1' input that has progressed to State 4. It is now outputting a '1' as is shown on the 7-segment display.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part2/IMG_0581.jpg}
+	\caption{\label{fig:part2img4}This image shows the state machine with an input of '1' that has progressed to State 5, and the output has returned to '0' accordingly.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part2/IMG_0582.jpg}
+	\caption{\label{fig:part2img5}This image shows the state machine with an input of '1' that is in State 8. Once again, because State 8 has an output of '1', the 7-segment display shows a '1'.}
+\end{figure}
+\end{center}
 
 \subsection{Problem 3}
 
@@ -200,7 +256,56 @@ We implemented this Mealy State Machine without overlap to detect the sequences 
 \end{table}
 
 \subsubsection{Results}
-The Mealy State Machine was able to successfully output '1' when "101" or "010" is detected.
+The Mealy State Machine was able to successfully output '1' when "101" or "010" is detected. The operation of this machine is shown in Figures ~\ref{fig:part3img1} through ~\ref{fig:part3img7}.
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0583.jpg}
+	\caption{\label{fig:part3img1}This image shows the state machine with an input of '0' that is currently disabled. Therefore, it is remaining in State 0 regardless of input.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0584.jpg}
+	\caption{\label{fig:part3img2}This image shows the state machine that is enabled, after receiving an input of '0'. Therefore, it has progressed to State 1 and will remain there per the state diagram until it detects an input of '1'.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0585.jpg}
+	\caption{\label{fig:part3img3}This image shows the state machine after receiving an input of '1' in State 1. It has progressed to State 3.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0586.jpg}
+	\caption{\label{fig:part3img4}This image shows the state machine after receiving an input of '0' in State 3, which returns it to State 0 while outputting '1'.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0587.jpg}
+	\caption{\label{fig:part3img5}This image shows the state machine after receiving input '1' from State 0. Therefore, it has progressed to State 2.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0588.jpg}
+	\caption{\label{fig:part3img6}This image shows the state machine after receiving input '0' from State 2, which has caused it to move to State 4.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=0.5\textwidth]{./images/Part3/IMG_0589.jpg}
+	\caption{\label{fig:part3img7}This image shows the state machine after receiving input '1' from State 4, so it has returned to State 0 and output 1.}
+\end{figure}
+\end{center}
 
 \section{Conclusion}
 In conclusion, by completing this lab we learned the implementation details of Mealy and Moore state machines in VHDL. This will be important for many tasks in digital system design. The most significant challenge for this lab was designing the Mealy State Machine for two potential sequences, but by carefully diagramming them together we were able to complete a design. State machines are essential building blocks of digital circuits, and now that we have completed them we can move on to even more advanced design.
@@ -218,6 +323,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+--Declares clock divider entity 
 entity Clockdivider is
      port(clk : in std_logic;
           start_timer : in std_logic;
@@ -229,15 +335,20 @@ architecture clockdivider_arch of Clockdivider is
 signal slowClock_sig : STD_LOGIC;
 
 begin
-    process  
+    process 
+    --When this variable reaches the most significant bit,
+    --approvimately 1 second will have passes 
     variable cnt :	std_logic_vector(26 downto 0):= 
     		"000000000000000000000000000";
     begin					 
+    		-- wait for a rising clock edge
         wait until ((clk'EVENT) AND (clk = '1'));
 	       
+	     --Reset the count variable
 		if (start_timer = '1') then
 	       cnt := "000000000000000000000000000";
 	    else  
+	    	  --Increments the count variable
            cnt := STD_LOGIC_VECTOR(unsigned(cnt) + 1);
 	    end if;
 
@@ -246,6 +357,7 @@ begin
    	    SlowClock <= cnt(26);
         slowClock_sig <= cnt(26);
 	
+	   --Ties LED 0 to slowClock
         if (slowClock_sig = '1') then
 		  led0 <= '1';
 	    else
@@ -257,7 +369,7 @@ end clockdivider_arch;
 
 \section{Problem 1 Constraints File}
 \begin{center}
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[scale=1]{./images/Lab6Part1Const.png}
 	\caption{\label{fig:Prob1Const}Constraints file for Problem 1.}
 \end{figure}
@@ -269,6 +381,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+--Declares the Moore Machine entity
 entity moore_machine is
     Port ( input : in STD_LOGIC;
            clk : in STD_LOGIC;
@@ -281,6 +394,7 @@ entity moore_machine is
 end moore_machine;
 
 architecture moore_arch of moore_machine is
+--Declares a component to slow down the clock
 component Clockdivider is
     Port ( clk : in STD_LOGIC;
            start_timer : in STD_LOGIC;
@@ -293,13 +407,17 @@ signal fastClock : STD_LOGIC;
 signal current_state : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 
 begin  
+	--Instantiates the clock divider component
     clock : Clockdivider port map(clk, timer_restart, fastClock, mediumClock, 
     		slowClock, led0);
     process(slowClock, enable)
     begin
+    	   --Reset will set back to State '0'
         if(reset = '1') then current_state <= "0000";
         end if;
+        --Looks for a rising slow clock edge
         if(slowClock'event and (slowClock = '1')) then
+		  --Progresses the state machine with an input of '1'           
             if(enable = '1') then
                 if(current_state = "1001") then
                     current_state <= "0000";
@@ -312,12 +430,15 @@ begin
         end if;
     end process;
     process(current_state)
+    	
     begin
+    	  --Will output based on state diagram
         if((current_state = "0100") or (current_state = "1000")) then
             output <= "1001111";
         else
             output <= "1000000";
         end if;
+        --Displays the state on the LEDs 
         case current_state is
             when "0000" => state <= "0000000001";
             when "0001" => state <= "0000000010";
@@ -338,7 +459,7 @@ end moore_arch;
 
 \section{Problem 2 Constraints File}
 \begin{center}
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[scale=1]{./images/Lab6Part2Const.png}
 	\caption{\label{fig:Prob1Const}Constraints file for Problem 2.}
 \end{figure}
@@ -349,6 +470,7 @@ end moore_arch;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+--Declares the Mealy Machine entity
 entity mealy is
     Port ( clk : in STD_LOGIC;
            enable : in STD_LOGIC;
@@ -361,6 +483,7 @@ entity mealy is
 end mealy;
 
 architecture Behavioral of mealy is
+--Declares a clock divider component
 component Clockdivider is
     Port ( clk : in STD_LOGIC;
            start_timer : in STD_LOGIC;
@@ -374,14 +497,19 @@ signal current_state : STD_LOGIC_VECTOR(2 downto 0) := "000";
 signal output_signal : STD_LOGIC := '0'; 
 
 begin
+	--Instantiates the clock divider
     clock : Clockdivider port map(clk, clock_reset, fastClock, mediumClock, 
     		slowClock, led0);
     process(slowClock, enable)
     begin
+    		--Sets back to State 0 if reset
         if(reset = '1') then current_state <= "000";
         end if;
+        --Waits for a slow clock rising edge
         if(slowClock'event and (slowClock = '1')) then
             if(enable = '1') then
+            	  --Evaluates current state and current input,
+            	  --Updates next state and output signal accordingly
                 case current_state is
                     when "000" =>
                         if(input = '1') then 
@@ -432,6 +560,7 @@ begin
     end process;
     process(output_signal)
     begin
+    	  --Set s the output based on an output signal
         if(output_signal = '1') then
             output <= "1001111";
         else
@@ -440,6 +569,7 @@ begin
     end process;
     process(current_state)
     begin
+    	   --Ties state to LED indicators
         case current_state is
             when "000" => state <= "00001";
             when "001" => state <= "00010";
@@ -454,7 +584,7 @@ end Behavioral;
 
 \section{Problem 3 Constraints File}
 \begin{center}
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[scale=1]{./images/Lab6Part3Const.png}
 	\caption{\label{fig:Prob1Const}Constraints file for Problem 3.}
 \end{figure}
