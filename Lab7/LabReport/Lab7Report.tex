@@ -101,19 +101,169 @@ We decided to design individual entities for each arithmetic operation that we w
 \subsection{Problem 2 }
 
 \subsubsection{Background}
+For problem 2, we are instructed to create a simple Finite State Machine that will issue the four different commands needed to operate the arithmetic logic unit created in Problem 1.
 
 \subsubsection{Design Solution}
+Because there are four possible commands, and our select input from Problem 1 has 2-bits, we know that this state machine requires 2 bits and four possible states. We also utilized our clock divider from a previous lab to slow down the clock signal we are using the allow this machine to be tested and observed on the Basys3. The input and output ports for this design are shown in Tables ~\ref{tab:fsm_input_Ports} and ~\ref{tab:fsm_output_Ports}, respectively. The state diagram is displayed in Figure ~\ref{fig:fsm_state_diagram}.
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	clk &  Clock & W5 \\ \hline
+	enable & Switch 0 & V17 \\ \hline
+	reset & Button Right & T17 \\ \hline
+\end{tabular}
+\caption{\label{tab:fsm_input_Ports}Input port assignments for  the finite state machine.}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	output\_sel[0] & LED 0 & U16 \\ \hline
+	output\_sel[1] & LED 1 & E19 \\ \hline
+\end{tabular}
+\caption{\label{tab:fsm_output_Ports}Output port assignments for the finite state machine.}
+\end{center}
+\end{table}
+
+\begin{center}
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{./images/fsmStateDiagram.png}
+	\caption{\label{fig:fsm_state_diagram}State diagram based off of the "enable" input.}
+\end{figure}
+\end{center}
 
 \subsubsection{Results}
+
+
 
 \subsection{Problem 3}
 
 \subsubsection{Background}
-
+Problem 4 integrates the two units developed in the previous problem. We are to use the finite state machine to control the arithmetic state machine, cycling through each operation on the given inputs.
 
 \subsubsection{Design Solution}
+For our solution, we tied the output signal of the finite state machine to the select input for the arithmetic logic unit. This allows the unit to cycle through all possible operations for the given input. We also chose to show the current operation in our LEDs to help with debugging. The inputs and outputs for this design is shown in Tables ~\ref{tab:integrated_input_Ports} and ~\ref{tab:integration_output_Ports}, respectfully. The truth table for these operations is shown in Tables ~\ref{tab:integrated_truth_table1} and ~\ref{tab:integrated_truth_table2}.
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	in1[0] &  Switch 5 & V15 \\ \hline
+	in1[1] & Switch 4 & w15 \\ \hline
+	in2[0] & Switch 3 & W16 \\ \hline
+	in2[1] & Switch 2 & W17 \\ \hline
+	clk &  Clock & W5 \\ \hline
+	enable & Switch 0 & V17 \\ \hline
+	reset & Button Right & T17 \\ \hline
+\end{tabular}
+\caption{\label{tab:integration_input_Ports}Input port assignments for  the integrated circuit.}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Bit & Label & Port \\ \hline
+	output[0] & LED 0 & U16 \\ \hline
+	output[1] & LED 1 & E19 \\ \hline
+	operation[0] & & U19 \\ \hline
+	operation[1] & & V19 \\ \hline
+\end{tabular}
+\caption{\label{tab:integration_output_Ports}Output port assignments for the integrated circuit.}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l | l |}
+	\hline
+	in1 & in2 & state(sel) & output \\ \hline
+	00 & 00 & 00 & 00 \\ \hline
+	00 & 00 & 01 & 00 \\ \hline
+	00 & 00 & 10 & 00 \\ \hline
+	00 & 00 & 11 & 00 \\ \hline
+	00 & 01 & 00 & 00 \\ \hline
+	00 & 01 & 01 & 01 \\ \hline
+	00 & 01 & 10 & 00 \\ \hline
+	00 & 01 & 11 & 00 \\ \hline
+	00 & 10 & 00 & 00 \\ \hline
+	00 & 10 & 01 & 10 \\ \hline
+	00 & 10 & 10 & 00 \\ \hline
+	00 & 10 & 11 & 00 \\ \hline
+	00 & 11 & 00 & 00 \\ \hline
+	00 & 11 & 01 & 11 \\ \hline
+	00 & 11 & 10 & 00 \\ \hline
+	00 & 11 & 11 & 00 \\ \hline
+	01 & 00 & 00 & 00 \\ \hline
+	01 & 00 & 01 & 01 \\ \hline
+	01 & 00 & 10 & 01 \\ \hline
+	01 & 00 & 11 & 01 \\ \hline
+	01 & 01 & 00 & 01 \\ \hline
+	01 & 01 & 01 & 01 \\ \hline
+	01 & 01 & 10 & 00 \\ \hline
+	01 & 01 & 11 & 10 \\ \hline
+	01 & 10 & 00 & 00 \\ \hline
+	01 & 10 & 01 & 11 \\ \hline
+	01 & 10 & 10 & 00 \\ \hline
+	01 & 10 & 11 & 00 \\ \hline
+	01 & 11 & 00 & 01 \\ \hline
+	01 & 11 & 01 & 11 \\ \hline
+	01 & 11 & 10 & 00 \\ \hline
+	01 & 11 & 11 & 00 \\ \hline
+\end{tabular}
+\caption{\label{tab:integrated_truth_table1}Truth table for each set of given inputs in each possible state part 1.}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l | l | l |}
+	\hline
+	in1 & in2 & state(sel) & output \\ \hline
+	10 & 00 & 00 & 00 \\ \hline
+	10 & 00 & 01 & 10 \\ \hline
+	10 & 00 & 10 & 10 \\ \hline
+	10 & 00 & 11 & 10 \\ \hline
+	10 & 01 & 00 & 00 \\ \hline
+	10 & 01 & 01 & 11 \\ \hline
+	10 & 01 & 10 & 01 \\ \hline
+	10 & 01 & 11 & 00 \\ \hline
+	10 & 10 & 00 & 10 \\ \hline
+	10 & 10 & 01 & 10 \\ \hline
+	10 & 10 & 10 & 00 \\ \hline
+	10 & 10 & 11 & 00 \\ \hline
+	10 & 11 & 00 & 10 \\ \hline
+	10 & 11 & 01 & 11 \\ \hline
+	10 & 11 & 10 & 00 \\ \hline
+	10 & 11 & 11 & 00 \\ \hline
+	11 & 00 & 00 & 00 \\ \hline
+	11 & 00 & 01 & 11 \\ \hline
+	11 & 00 & 10 & 11 \\ \hline
+	11 & 00 & 11 & 11 \\ \hline
+	11 & 01 & 00 & 01 \\ \hline
+	11 & 01 & 01 & 11 \\ \hline
+	11 & 01 & 10 & 01 \\ \hline
+	11 & 01 & 11 & 10 \\ \hline
+	11 & 10 & 00 & 10 \\ \hline
+	11 & 10 & 01 & 11 \\ \hline
+	11 & 10 & 10 & 00 \\ \hline
+	11 & 10 & 11 & 00 \\ \hline
+	11 & 11 & 00 & 11 \\ \hline
+	11 & 11 & 01 & 11 \\ \hline
+	11 & 11 & 10 & 00 \\ \hline
+	11 & 11 & 11 & 00 \\ \hline
+\end{tabular}
+\caption{\label{tab:integrated_truth_table2}Truth table for each set of given inputs in each possible state part 2.}
+\end{center}
+\end{table}
 
 \subsubsection{Results}
 
@@ -261,6 +411,46 @@ end Behavioral;
 
 \section{Problem 2 VHDL Code}
 \begin{lstlisting}[language=VHDL]
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Clockdivider is
+     port(clk : in std_logic;
+          start_timer : in std_logic;
+	  FastClock,MediumClock,SlowClock, led0 : out std_logic);
+end Clockdivider;
+
+architecture clockdivider_arch of Clockdivider is
+
+signal slowClock_sig : STD_LOGIC;
+
+begin
+    process  
+    variable cnt :	std_logic_vector(26 downto 0):= "000000000000000000000000000";
+    begin					 
+        wait until ((clk'EVENT) AND (clk = '1'));
+	       
+		if (start_timer = '1') then
+	       cnt := "000000000000000000000000000";
+	    else  
+           cnt := STD_LOGIC_VECTOR(unsigned(cnt) + 1);
+	    end if;
+
+   	    FastClock <= cnt(22);
+   	    MediumClock <= cnt(24);	
+   	    SlowClock <= cnt(26);
+        slowClock_sig <= cnt(26);
+	
+        if (slowClock_sig = '1') then
+		  led0 <= '1';
+	    else
+		  led0 <= '0';
+	    end if;
+	end process;
+end clockdivider_arch;
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
