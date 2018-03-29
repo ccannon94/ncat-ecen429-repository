@@ -34,29 +34,38 @@
 \end{titlingpage}
 
 \section{Introduction}
-This lab tests our 
+This lab tests our ability to integrate multiple, relatively complex synchronous devices into a single unit. When complete, this lab will produce a finite state machine that will conduct arithmetic operations in each state.
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\begin{definition}
+Synchronous Device: an electronic circuit that performs operations in time with a clock.
+\label{def:synchronous_device}
+\end{definition}
 
 \section{Background, Design Solution, and Results}
 
 \subsection{Problem 1 }
 
 \subsubsection{Background}
-
+For Problem 1, we were to complete an ALU that would perform operations on 2 2-bit operands. We were instructed to select 4 operations for our ALU to complete, and we chose $AND, OR, LOGICAL SHIFT LEFT,$ and $LOGICAL SHIFT RIGHT$.
 
 \subsubsection{Design Solution}
-
+We decided to design individual entities for each arithmetic operation that we wished to complete. The thought process behind this design is that it will reduce the complexity of our overall code as well as run faster because we are simulating separate hardware for each operation to be completed. Because the inputs are 2-bits, the output will be 2-bits only. All overflow will be ignored, and negative numbers will be displayed as "00". Inputs for this system is assigned in Table ~\ref{tab:alu_input_Ports} and outputs are assigned in Table ~\ref{tab:alu_output_Ports}. A different operation will be performed for each possible value of the select input SEL, and those operations are defined in Table ~\ref{tab:alu_sel_ops}.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{| l | l | l |}
 	\hline
 	Bit & Label & Port \\ \hline
-	FastClock & LED 0 & U16 \\ \hline
-	MediumClock & LED 1 & E19 \\ \hline
-	SlowClock & LED 2 & U19 \\ \hline
-	led0 & LED 15 & L1 \\ \hline
+	in1[0] &  Switch 5 & V15 \\ \hline
+	in1[1] & Switch 4 & w15 \\ \hline
+	in2[0] & Switch 3 & W16 \\ \hline
+	in2[1] & Switch 2 & W17 \\ \hline
+	sel[0] & Switch 1 & U19 \\ \hline
+	sel[1] & Switch 0 & V16 \\ \hline
 \end{tabular}
-\caption{\label{tab:clockDivider_input_Ports}Input port assignments for Clock Divider.}
+\caption{\label{tab:alu_input_Ports}Input port assignments for  the arithmetic logic unit.}
 \end{center}
 \end{table}
 
@@ -65,10 +74,24 @@ This lab tests our
 \begin{tabular}{| l | l | l |}
 	\hline
 	Bit & Label & Port \\ \hline
-	clk & Clock & W5 \\ \hline
-	starttimer & Switch 0 & V17 \\ \hline
+	output[0] & LED 0 & U16 \\ \hline
+	output[1] & LED 1 & E19 \\ \hline
 \end{tabular}
-\caption{\label{tab:clockDivider_output_Ports}Output port assignments for Clock Divider.}
+\caption{\label{tab:alu_output_Ports}Output port assignments for arithmetic logic unit.}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | l |}
+	\hline
+	SEL & Operation \\ \hline
+	"00" & $output = in1 AND in2$ \\ \hline
+	"01" & $output = in1 OR in2$ \\ \hline
+	"10" & $output = in1 SHIFT_RIGHT_BY in2 BITS$ \\ \hline
+	"11" & $output = in1 SHIFT_LEFT_BY in2 BITS$ \\ \hline
+\end{tabular}
+\caption{\label{tab:alu_sel_ops}Operation performed for a given select input SEL.}
 \end{center}
 \end{table}
 
