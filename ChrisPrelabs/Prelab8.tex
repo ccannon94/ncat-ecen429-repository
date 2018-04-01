@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\graphicspath{report_images/}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{amsthm}
+% The next three lines make the table and figure numbers also include section number
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+% Needed to make titling page without a page number
+\usepackage{titling}
+
+% DOCUMENT INFORMATION =================================================
+\font\titleFont=cmr12 at 11pt
+\title {{\titleFont ECEN 429: Introduction to Digital Systems Design Laboratory \\ North Carolina Agricultural and Technical State University \\ Department of Electrical and Computer Engineering}} % Declare Title
+\author{\titleFont Reporter: Chris Cannon \\ Partner: Nikiyah Beulah} % Declare authors
+\date{\titleFont March 29, 2018}
+% ======================================================================
+
+\begin{document}
+
+\begin{titlingpage}
+\maketitle
+\begin{center}
+	Prelab 8 Part One
+\end{center}
+\end{titlingpage}
+
+\section{Introduction}
+The purpose of this prelab is to refresh the concepts of state machines and learn to apply them on the boards. State machines are incredibly important tools in electrical and programming design. Therefore, after mastering this skill we will be able to use a new tool in our circuit designs. This lab will also explore using finite state machines to control units like a counter.
+
+\section{Background, Design Solution, Results}
+\subsection{Problem 1}
+Read over VHDL code for implementing registers on the next page. How are the contents of the register cleared? How is it enabled? What size (how many bits wide) is the register? How would one change the size of the register?
+
+The contents of the register are cleared when D is "0000", load is '1' and the clock reaches a rising edge.
+
+The register is enabled by setting load to '1'.
+
+The register is 4 bits wide. One could change the size of the register by adjusting the size of Q and D.
+
+\subsection{Problem 2}
+Read over the VHDL code for implementing a counter in section 16.1 of your book. Look at Figure 16.3. How does it implement the counting? How is it initialized? How would you change it so it can be initialized with a different value?
+
+It implements counting by incrementing the Count variable when reset is not '1'.
+
+I could add an if statement that will set Count to a given number when a new bit Load is '1'.
+
+\subsection{Problem 3}
+Read over the VHDL code for implementing a shift register in section 16.2 of your book. Look at Figure 16.14. What do the inputs and outputs mean? How does it implement the shift? How do you make it shift in the opposite direction? How would you add an enable signal?
+
+The input clk is a clock signal that gives time to the circuit, the input rst is a reset signal that will restart the counter, the input sin is an input signal that will be added to the register.
+
+The output buffer represent the stored value in the register.
+
+You can switch the direction of the shift by switching the sin input.
+
+I could add an enable bit input, and put the two lines after begin inside an if statement that checks if enable is high.
+
+\section{Conclusion}
+The shift registers discussed in this prelab are going to be useful components that we can use as we design more advanced and useful circuits. It will be challenging to ensure that data is stored in a safe and fault-tolerant manner, but I am looking forward to the challenge.
+
+\end{document}
