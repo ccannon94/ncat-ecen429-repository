@@ -16,20 +16,19 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.cache/wt [current_project]
-set_property parent.project_path C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.cache/wt [current_project]
+set_property parent.project_path C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.srcs/sources_1/new/clockdivider.vhd
+read_vhdl -library xil_defaultlib C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.srcs/sources_1/new/clockdivider.vhd
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -38,8 +37,8 @@ read_vhdl -library xil_defaultlib C:/Users/student/Desktop/ncat-ecen429-reposito
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.srcs/constrs_1/new/const.xdc
-set_property used_in_implementation false [get_files C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.srcs/constrs_1/new/const.xdc]
+read_xdc C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.srcs/constrs_1/new/const.xdc
+set_property used_in_implementation false [get_files C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part1/Lab6Part1.srcs/constrs_1/new/const.xdc]
 
 
 synth_design -top Clockdivider -part xc7a35tcpg236-1

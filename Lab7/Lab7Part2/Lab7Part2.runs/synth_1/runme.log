@@ -14,19 +14,19 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10480 
+INFO: Helper process launched with PID 10108 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 352.141 ; gain = 101.016
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 344.813 ; gain = 99.953
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:12]
-INFO: [Synth 8-3491] module 'Clockdivider' declared at 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:5' bound to instance 'clockDiv' of component 'Clockdivider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:25]
-INFO: [Synth 8-638] synthesizing module 'Clockdivider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:11]
-INFO: [Synth 8-4471] merging register 'slowClock_sig_reg' into 'SlowClock_reg' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:30]
-WARNING: [Synth 8-6014] Unused sequential element slowClock_sig_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:30]
-INFO: [Synth 8-256] done synthesizing module 'Clockdivider' (1#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'FSM' (2#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:12]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:12]
+INFO: [Synth 8-3491] module 'Clockdivider' declared at 'C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:5' bound to instance 'clockDiv' of component 'Clockdivider' [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'Clockdivider' [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:11]
+INFO: [Synth 8-4471] merging register 'slowClock_sig_reg' into 'SlowClock_reg' [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:30]
+WARNING: [Synth 8-6014] Unused sequential element slowClock_sig_reg was removed.  [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'Clockdivider' (1#1) [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (2#1) [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 403.570 ; gain = 152.445
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 396.984 ; gain = 152.125
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -36,41 +36,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 403.570 ; gain = 152.445
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 396.984 ; gain = 152.125
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/constrs_1/new/const.xdc]
-Finished Parsing XDC File [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/constrs_1/new/const.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FSM_propImpl.xdc].
+Parsing XDC File [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FSM_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/FSM_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 723.520 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 715.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 723.520 ; gain = 472.395
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 715.531 ; gain = 470.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 723.520 ; gain = 472.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 715.531 ; gain = 470.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 723.520 ; gain = 472.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 715.531 ; gain = 470.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 723.520 ; gain = 472.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 715.531 ; gain = 470.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -122,10 +122,10 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element clockDiv/FastClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:27]
-WARNING: [Synth 8-6014] Unused sequential element clockDiv/MediumClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:28]
+WARNING: [Synth 8-6014] Unused sequential element clockDiv/FastClock_reg was removed.  [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element clockDiv/MediumClock_reg was removed.  [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/imports/new/clockdivider.vhd:28]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 723.520 ; gain = 472.395
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 715.531 ; gain = 470.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -137,13 +137,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 724.906 ; gain = 473.781
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 720.254 ; gain = 475.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 724.980 ; gain = 473.855
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 720.328 ; gain = 475.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -154,10 +154,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4765] Removing register instance (\current_state_reg[1] ) from module (FSM) as it is equivalent to (\output_sel_reg[1] ) and driving same net [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:30]
-INFO: [Synth 8-4765] Removing register instance (\current_state_reg[0] ) from module (FSM) as it is equivalent to (\output_sel_reg[0] ) and driving same net [C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:30]
+INFO: [Synth 8-4765] Removing register instance (\current_state_reg[1] ) from module (FSM) as it is equivalent to (\output_sel_reg[1] ) and driving same net [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:30]
+INFO: [Synth 8-4765] Removing register instance (\current_state_reg[0] ) from module (FSM) as it is equivalent to (\output_sel_reg[0] ) and driving same net [C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.srcs/sources_1/new/FSM.vhd:30]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:05 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -181,7 +181,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -194,7 +194,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -206,25 +206,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -258,11 +258,11 @@ Report Instance Areas:
 |2     |  clockDiv |Clockdivider |    37|
 +------+-----------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 739.895 ; gain = 495.035
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 744.039 ; gain = 172.965
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.039 ; gain = 492.914
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 739.895 ; gain = 176.488
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 739.895 ; gain = 495.035
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -274,8 +274,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 20 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 744.273 ; gain = 505.066
-INFO: [Common 17-1381] The checkpoint 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.runs/synth_1/FSM.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 740.156 ; gain = 508.172
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab7/Lab7Part2/Lab7Part2.runs/synth_1/FSM.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file FSM_utilization_synth.rpt -pb FSM_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 744.273 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 15 14:43:23 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 740.156 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 29 02:56:42 2018...

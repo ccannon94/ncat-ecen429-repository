@@ -67,7 +67,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param xicom.use_bs_reader 1
   open_checkpoint mealy_routed.dcp
-  set_property webtalk.parent_dir C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part3/Lab6Part3.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part3/Lab6Part3.cache/wt [current_project]
   catch { write_mem_info -force mealy.mmi }
   write_bitstream -force mealy.bit 
   catch {write_debug_probes -quiet -force mealy}

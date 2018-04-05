@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/student/Desktop/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab6/Lab6Part2/Lab6Part2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="09df1f6fc66d487091a2129f67611b6f"/>

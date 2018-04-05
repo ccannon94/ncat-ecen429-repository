@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/student/Desktop/ncat-ecen429-repository/Lab8/Lab8Part2/Lab8Part2.srcs/constrs_1/new/const.xdc rfile:../../../Lab8Part2.srcs/constrs_1/new/const.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab8/Lab8Part2/Lab8Part2.srcs/constrs_1/new/const.xdc rfile:../../../Lab8Part2.srcs/constrs_1/new/const.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W7 [get_ports {count[6]}]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
