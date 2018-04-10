@@ -5,6 +5,7 @@ entity Lab9Part2 is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
            sensors_EW : in STD_LOGIC_VECTOR(1 downto 0);
+           sensor_NT : in STD_LOGIC;
            north : out STD_LOGIC_VECTOR(4 downto 0);
            south : out STD_LOGIC_VECTOR(2 downto 0);
            east_west : out STD_LOGIC_VECTOR(2 downto 0);
@@ -37,7 +38,9 @@ begin
                 when "0000" =>
                     if(sensors_EW = "01" or sensors_EW = "10" or sensors_EW = "11") then
                         next_state <= "0001";
-                    else 
+                    elsif(sensor_NT = '1') then 
+                        next_state <= "0111";
+                    else
                         next_state <= "0000";
                     end if;
                 when "0001" =>
@@ -53,11 +56,23 @@ begin
                 when "0100" =>
                     next_state <= "0101";
                 when "0101" =>
-                    next_state <= "0110";
+                    if(sensor_NT = '1') then
+                        next_state <= "0110";
+                    else
+                        next_state <= "0000";
+                    end if;
                 when "0110" =>
-                    next_state <= "0111";
+                    if(sensor_NT = '1') then
+                        next_state <= "0110";
+                    else
+                        next_state <= "1001";
+                    end if;
                 when "0111" =>
                     next_state <= "1000";
+                when "1000" =>
+                    next_state <= "0110";
+                when "1001" =>
+                    next_state <= "1010";
                 when others =>
                     next_state <= "0000";
             end case;
@@ -95,6 +110,14 @@ begin
                 south <= "100";
                 east_west <= "100";
             when "0111" =>
+                north <= "00001";
+                south <= "010";
+                east_west <= "100";
+            when "1000" =>
+                north <= "00001";
+                south <= "100";
+                east_west <= "100";
+            when "1001" =>
                 north <= "00101";
                 south <= "100";
                 east_west <= "100";
