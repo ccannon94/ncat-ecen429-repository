@@ -61,84 +61,23 @@ proc step_failed { step } {
 }
 
 
-start_step init_design
-set ACTIVE_STEP init_design
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab9/Lab9Part2/Lab9Part2.runs/impl_1/Lab9Part2.dcp
-  set_property webtalk.parent_dir C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab9/Lab9Part2/Lab9Part2.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab9/Lab9Part2/Lab9Part2.xpr [current_project]
-  set_property ip_output_repo C:/Users/Chris/Documents/development/ncat-ecen429-repository/Lab9/Lab9Part2/Lab9Part2.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  close_msg_db -file init_design.pb
+  create_msg_db write_bitstream.pb
+  open_checkpoint Lab9Part2_routed.dcp
+  set_property webtalk.parent_dir C:/Users/student/Desktop/ncat-ecen429-repository/Lab9/Lab9Part2/Lab9Part2.cache/wt [current_project]
+  catch { write_mem_info -force Lab9Part2.mmi }
+  write_bitstream -force Lab9Part2.bit 
+  catch {write_debug_probes -quiet -force Lab9Part2}
+  catch {file copy -force Lab9Part2.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force Lab9Part2_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file Lab9Part2_drc_opted.rpt -pb Lab9Part2_drc_opted.pb -rpx Lab9Part2_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  implement_debug_core 
-  place_design 
-  write_checkpoint -force Lab9Part2_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file Lab9Part2_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file Lab9Part2_utilization_placed.rpt -pb Lab9Part2_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file Lab9Part2_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force Lab9Part2_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file Lab9Part2_drc_routed.rpt -pb Lab9Part2_drc_routed.pb -rpx Lab9Part2_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file Lab9Part2_methodology_drc_routed.rpt -pb Lab9Part2_methodology_drc_routed.pb -rpx Lab9Part2_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file Lab9Part2_power_routed.rpt -pb Lab9Part2_power_summary_routed.pb -rpx Lab9Part2_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file Lab9Part2_route_status.rpt -pb Lab9Part2_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file Lab9Part2_timing_summary_routed.rpt -rpx Lab9Part2_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file Lab9Part2_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file Lab9Part2_clock_utilization_routed.rpt"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force Lab9Part2_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

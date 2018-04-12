@@ -9,7 +9,9 @@ entity traffic_control is
            north : out STD_LOGIC_VECTOR(4 downto 0);
            south : out STD_LOGIC_VECTOR(2 downto 0);
            east_west : out STD_LOGIC_VECTOR(2 downto 0);
-           clock_led : out STD_LOGIC);
+           clock_led : out STD_LOGIC;
+           output_count : out STD_LOGIC_VECTOR(6 downto 0);
+           output_mux : out STD_LOGIC_VECTOR(3 downto 0));
 end traffic_control;
 
 architecture Behavioral of traffic_control is
@@ -20,15 +22,25 @@ component clock_divider is
 	  FastClock,MediumClock,SlowClock, led0 : out std_logic);
 end component clock_divider;
 
+component traffic_count is
+    port(clk, e_signal, w_signal : in STD_LOGIC;
+        nt_signal : in STD_LOGIC;
+        output_count : out STD_LOGIC_VECTOR(6 downto 0);
+        output_mux : out STD_LOGIC_VECTOR(3 downto 0));
+end component traffic_count;
+
 signal current_state : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal next_state : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 signal start_timer : STD_LOGIC := '0';
 signal fast_clock : STD_LOGIC;
 signal medium_clock : STD_LOGIC;
 signal slow_clock : STD_LOGIC;
+signal sig_count : STD_LOGIC_VECTOR(6 downto 0);
+signal sig_mux : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
     clk_div : clock_divider port map(clk, start_timer, fast_clock, medium_clock, slow_clock, clock_led);
+    traf_cnt : traffic_count port map(fast_clock, sensors_EW(0), sensors_EW(1), sensor_NT, sig_count, sig_mux);
     
     process(slow_clock, reset)
     begin
@@ -128,4 +140,6 @@ begin
         end case;
     end process;
     current_state <= next_state;
+    output_count <= sig_count;
+    output_mux <= sig_mux;
 end Behavioral;

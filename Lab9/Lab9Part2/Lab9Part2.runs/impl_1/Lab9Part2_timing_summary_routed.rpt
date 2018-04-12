@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Apr 10 15:38:30 2018
-| Host         : c3-windows10 running 64-bit major release  (build 9200)
+| Date         : Thu Apr 12 13:06:06 2018
+| Host         : DESKTOP-C4F8K0T running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Lab9Part2_timing_summary_routed.rpt -rpx Lab9Part2_timing_summary_routed.rpx -warn_on_violation
 | Design       : Lab9Part2
 | Device       : 7a35t-cpg236

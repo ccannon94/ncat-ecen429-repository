@@ -35,21 +35,13 @@ begin
         elsif(slow_clock'event and slow_clock = '1') then
             case current_state is
                 when "0000" =>
-                    if(sensors_EW = '1') then
-                        next_state <= "0001";
-                    else 
-                        next_state <= "0000";
-                    end if;
+                    next_state <= "0001";
                 when "0001" =>
                     next_state <= "0010";
                 when "0010" =>
                     next_state <= "0011";
                 when "0011" =>
-                    if(sensors_EW = '1') then
-                        next_state <= "0011";
-                    else
-                        next_state <= "0100";
-                    end if;
+                    next_state <= "0100";
                 when "0100" =>
                     next_state <= "0101";
                 when "0101" =>
