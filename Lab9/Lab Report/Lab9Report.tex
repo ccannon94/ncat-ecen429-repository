@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+to\documentclass[11pt]{article}
 
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
@@ -162,16 +162,12 @@ Some functionality, such as reset and enable, already existed from the previous 
 	\hline
 	Bit & Label & Port \\ \hline
 	clk &  Clock & W5 \\ \hline
-	direction & Switch 0 & V17 \\ \hline
-	load & Switch 1 & V16 \\ \hline
-	enable & Switch 2 & W16 \\ \hline
-	reset & Button Right & T17 \\ \hline
-	input3 & Switch 15 & R2 \\ \hline
-	input2 & Switch 14 & T1 \\ \hline
-	input1 & Switch 13 & U1 \\ \hline
-	input 0 & Switch 12 & W2 \\ \hline
+	reset & Button Center & U18 \\ \hline
+	sensor EW 1 Swtch 0 & & V17 \\ \hline
+	sensor EW 0 & Switch 1 & V16 \\ \hline
+	sensor NT & Button Right& T17 \\ \hline
 \end{tabular}
-\caption{\label{tab:advanced_counter_input_Ports}Input port assignments for  the advanced counter.}
+\caption{\label{tab:part2_input_Ports}Input port assignments for  the second traffic system.}
 \end{center}
 \end{table}
 
@@ -180,16 +176,20 @@ Some functionality, such as reset and enable, already existed from the previous 
 \begin{tabular}{| l | l | l |}
 	\hline
 	Bit & Label & Port \\ \hline
-	clk led & LED 15 & L1 \\ \hline
-	count6 & CA & W7 \\ \hline
-	count5 & CB & W6 \\ \hline
-	count4 & CC & U8 \\ \hline
-	count3 & CD & V8 \\ \hline
-	count2 & CE & U5 \\ \hline
-	count1 & CF & V5 \\ \hline
-	count0 & CG & U7 \\ \hline
+	clk led & LED 12 & P3 \\ \hline
+	east west 2 & & L1 \\ \hline
+	east west 1 & & P1 \\ \hline
+	east west 0 & & N3 \\ \hline
+	south 2 & & U3 \\ \hline
+	south 1 & & W3 \\ \hline
+	south 0 & & V3 \\ \hline
+	north 4 & & W18 \\ \hline
+	north 3 & & V19 \\ \hline
+	north 2 & & U19 \\ \hline
+	north 1 & & E19 \\ \hline
+	north 0 & & U16 \\ \hline
 \end{tabular}
-\caption{\label{tab:advanced_counter_output_Ports}Output port assignments for the advanced counter.}
+\caption{\label{tab:part2_output_Ports}Output port assignments for the second traffic system.}
 \end{center}
 \end{table}
 
@@ -223,7 +223,7 @@ The counter was able to successfully load values and pause when disabled. Select
 	input 0 & Switch 12 & W2 \\ \hline
 	state input & Button C & U18 \\ \hline
 \end{tabular}
-\caption{\label{tab:integration_input_Ports}Input port assignments for  the integrated circuit.}
+\caption{\label{tab:part3_input_Ports}Input port assignments for  the final traffic system with counters.}
 \end{center}
 \end{table}
 
@@ -241,7 +241,7 @@ The counter was able to successfully load values and pause when disabled. Select
 	count1 & CF & V5 \\ \hline
 	count0 & CG & U7 \\ \hline
 \end{tabular}
-\caption{\label{tab:integration_output_Ports}Output port assignments for the integrated circuit.}
+\caption{\label{tab:part3_output_Ports}Output port assignments for the final traffic system with counters.}
 \end{center}
 \end{table}
 
