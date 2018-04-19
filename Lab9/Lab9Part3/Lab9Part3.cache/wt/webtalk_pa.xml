@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Apr 12 14:33:25 2018">
+<application name="pa" timeStamp="Thu Apr 19 10:13:20 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="783f912658db4548a06cce96fad40640" type="ProjectID"/>
 <property name="ProjectIteration" value="11" type="ProjectIteration"/>
@@ -37,7 +37,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CreateConstraintsFilePanel_FILE_NAME" value="1" type="GuiHandlerData"/>
 <property name="CreateSrcFileDialog_FILE_NAME" value="1" type="GuiHandlerData"/>
 <property name="DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS" value="2" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="10" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="13" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="27" type="GuiHandlerData"/>
 <property name="MainMenuMgr_EDIT" value="2" type="GuiHandlerData"/>
 <property name="MainMenuMgr_FILE" value="4" type="GuiHandlerData"/>
@@ -63,6 +63,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SignalTreePanel_SIGNAL_TREE_TABLE" value="39" type="GuiHandlerData"/>
 <property name="SrcChooserPanel_CREATE_FILE" value="1" type="GuiHandlerData"/>
 <property name="TaskBanner_CLOSE" value="3" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="199" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="158" type="TclMode"/>
 </item>
 </section>
 </application>
