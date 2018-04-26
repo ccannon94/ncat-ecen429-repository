@@ -9,3 +9,330 @@
 # Log file: C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.runs/synth_1/vending_machine.vds
 # Journal file: C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
+source vending_machine.tcl -notrace
+Command: synth_design -top vending_machine -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1152 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 351.906 ; gain = 101.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vending_machine' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/vending_machine.vhd:10]
+INFO: [Synth 8-3491] module 'clock_divider' declared at 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:5' bound to instance 'cd' of component 'clock_divider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/vending_machine.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:11]
+INFO: [Synth 8-4471] merging register 'slowClock_sig_reg' into 'SlowClock_reg' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element slowClock_sig_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (1#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:11]
+INFO: [Synth 8-3491] module 'timer_five' declared at 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/timer_five.vhd:5' bound to instance 'timer' of component 'timer_five' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/vending_machine.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'timer_five' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/timer_five.vhd:10]
+WARNING: [Synth 8-614] signal 'clk' is read in the process but is not in the sensitivity list [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/timer_five.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'timer_five' (2#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/timer_five.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'vending_machine' (3#1) [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/vending_machine.vhd:10]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 404.145 ; gain = 153.758
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 404.145 ; gain = 153.758
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/constrs_1/new/const.xdc]
+Finished Parsing XDC File [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/constrs_1/new/const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vending_machine_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vending_machine_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 729.129 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'next_state_reg' in module 'vending_machine'
+INFO: [Synth 8-5544] ROM "timer_reset" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dispense_candy" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dispense_gum" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "amount" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                             0000 |                             0000
+               zero_dime |                             0001 |                             0010
+             zero_nickel |                             0010 |                             0001
+                    five |                             0011 |                             0011
+               five_dime |                             0100 |                             0100
+             five_nickel |                             0101 |                             0101
+                     ten |                             0110 |                             0110
+                ten_dime |                             0111 |                             0111
+              ten_nickel |                             1000 |                             1000
+                 fifteen |                             1001 |                             1001
+     fifteen_nickel_dime |                             1010 |                             1010
+                  twenty |                             1011 |                             1011
+                 iSTATE0 |                             1100 |                             1101
+                  iSTATE |                             1101 |                             1100
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'next_state_reg' using encoding 'sequential' in module 'vending_machine'
+WARNING: [Synth 8-327] inferring latch for variable 'timer_reset_reg' [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/vending_machine.vhd:33]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	  15 Input      5 Bit        Muxes := 1     
+	  30 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vending_machine 
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input      5 Bit        Muxes := 1     
+	  30 Input      4 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 4     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module timer_five 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cd/FastClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element cd/MediumClock_reg was removed.  [C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.srcs/sources_1/new/clock_divider.vhd:25]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 729.129 ; gain = 478.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     7|
+|3     |LUT1   |     1|
+|4     |LUT2   |     1|
+|5     |LUT3   |     7|
+|6     |LUT4   |     8|
+|7     |LUT5   |     2|
+|8     |LUT6   |    12|
+|9     |MUXF7  |     3|
+|10    |FDCE   |     7|
+|11    |FDRE   |    30|
+|12    |LD     |     1|
+|13    |IBUF   |     6|
+|14    |OBUF   |     8|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |    94|
+|2     |  cd     |clock_divider |    37|
+|3     |  timer  |timer_five    |    22|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 744.469 ; gain = 169.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 744.469 ; gain = 494.082
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 744.469 ; gain = 506.324
+INFO: [Common 17-1381] The checkpoint 'C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.runs/synth_1/vending_machine.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vending_machine_utilization_synth.rpt -pb vending_machine_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 744.469 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 14:49:38 2018...

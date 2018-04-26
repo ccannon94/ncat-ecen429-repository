@@ -9,3 +9,4 @@
 # Log file: C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.runs/synth_1/vending_machine.vds
 # Journal file: C:/Users/student/Desktop/ncat-ecen429-repository/Lab11/Lab11Part1/Lab11Part1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
+source vending_machine.tcl -notrace
