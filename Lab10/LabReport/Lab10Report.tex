@@ -34,17 +34,17 @@
 \end{titlingpage}
 
 \section{Introduction}
-% Desc go here
+This lab prompts us to implement a vending machine of our own design, within given specifications. Vending machines are an approachable implementation of finite state machines that can have varying levels of complexity, making them ideal for this lab. Our vending machine will use what we have learned about clocks, state machines, and inputs/outputs to make a real world device.
 
 \section{Background, Design Solution, and Results}
 
 \subsection{Problem 1 }
 
 \subsubsection{Background}
-% Give background
+This vending machine can dispense one of two items, gum or candy. Gum costs 15 cents and candy costs 20 cents. This machine does not provide change, which makes things easier for us because we need only know whether or not we exceeded the required amount, and not by how much.
 
 \subsubsection{Design Solution}
-% Describe Design
+This solution is a simple Moore state machine, as shown in Figure ~\ref{fig:lab10_state_diagram}. This Moore machine is designed with a state to dispense gum and a state to dispense candy. Any money input after the maximum values (20 cents) has been reached, is assumed to be automatically returned to the user, so not additional amount is recorded and no state progression takes place. We also included an "amount" output on the LEDs that would represent each of our possible states, with 0 cents as the least significant LED (on the right) and 20 cents as the most significant LED (on the left). The inputs for this implementation are summarized in Table ~\ref{tab:lab10_input_Ports} and Table ~\ref{tab:lab10_output_Ports}.
 
 \begin{table}[H]
 \begin{center}
@@ -53,7 +53,7 @@
 	Bit & Label & Port \\ \hline
 	clk & Clock & W5 \\ \hline
 	candy & Button Right & T17 \\ \hline
-	gun & Button Left & W19 \\ \hline
+	gum & Button Left & W19 \\ \hline
 	nickel & Button Top & T18 \\ \hline
 	dime & Button Bottom & U17 \\ \hline
 	reset & Button Center & U 18 \\ \hline
@@ -86,17 +86,73 @@
 \end{figure}
 
 \subsubsection{Results}
-% Describe Results
+This implementation successfully completed all design criteria. The results are summarized in the images ~\ref{fig:lab10_img1} through ~\ref{fig:lab10_img9}.
 
 \begin{figure}[H]
 \begin{center}
-	%\includegraphics[width=0.5\textwidth]{./images/Part1/l9p1img1.jpg}
-	\caption{\label{fig:part1_img1}Standard state, North and South are green, East/West is red.}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img1.jpg}
+	\caption{\label{fig:lab10_img1}No input, the amount is at 0.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img2.jpg}
+	\caption{\label{fig:lab10_img2}One dime input, the amount is at 10 cents.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img3.jpg}
+	\caption{\label{fig:lab10_img3}Two dime inputs, the amount is at 20 cents, and no more coins are accepted.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img4.jpg}
+	\caption{\label{fig:lab10_img4}Gum is selected, gum is being vended (as indicated by the LED on the left) and amount has returned to 0.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img5.jpg}
+	\caption{\label{fig:lab10_img5}One nickel inserted, amount is at 5 cents.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img6.jpg}
+	\caption{\label{fig:lab10_img6}Two nickels are inserted, amount is at 10 cents.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img7.jpg}
+	\caption{\label{fig:lab10_img7}Three nickels are inserted, amount is at 15 cents.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img8.jpg}
+	\caption{\label{fig:lab10_img8}Four nickels are inserted, amount is at 20 cents.}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{./images/lab10img9.jpg}
+	\caption{\label{fig:lab10_img9}Candy is selected, and is vending (as shown by LED on left). Amount returns to 0.}
 \end{center}
 \end{figure}
 
 \section{Conclusion}
-%Conclude some shit
+In this lab we successfully implemented the vending machine. The most difficult technical challenge was developing the state diagram in the prelab. Once we had our diagram completed, we found it relatively simple to implement on the board.
 
 \pagebreak
 
